@@ -167,14 +167,17 @@ imgs/
 # experiment outputs
 work_dirs/
 logs/
+demo/output/
 
 # checkpoints
+checkpoints/
 *.pth
 *.pt
+*.ckpt
 
 # datasets
 data/
 
 # python cache
 __pycache__/
-*.pyc
+*.py[cod]
