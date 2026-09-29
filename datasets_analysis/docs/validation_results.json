@@ -1,0 +1,1391 @@
+{
+  "data_root": "/data/users/mqf/bushu/Painter-ct/data",
+  "datasets": {
+    "TG3K": {
+      "split_files": [
+        "TG3K/data/train.json",
+        "TG3K/data/val.json",
+        "TG3K/data/test.json"
+      ],
+      "fields": {
+        "image_path": 208,
+        "target_path": 208,
+        "label_path": 208,
+        "type": 208,
+        "task": 208,
+        "modality": 208,
+        "dataset": 208,
+        "points": 208,
+        "point_ids": 208,
+        "target_point_paths": 208,
+        "source_dir": 208
+      },
+      "point_fields": {
+        "x": 1040,
+        "y": 1040
+      },
+      "path_types": {
+        "image_path:relative": 208,
+        "target_path:relative": 208,
+        "label_path:relative": 208,
+        "target_point_paths:relative": 1040,
+        "source_dir:windows_absolute": 208
+      },
+      "image_sizes": {
+        "448x896": 208
+      },
+      "image_modes": {
+        "RGB": 208
+      },
+      "image_formats": {
+        "PNG": 208
+      },
+      "grayscale_pixel_images": 208,
+      "input_images": 208,
+      "all_file_extensions": {
+        ".json": 3,
+        ".png": 1664
+      },
+      "unreferenced_input_images": 0,
+      "keypoint_counts": {
+        "5": 208
+      },
+      "point_names": [],
+      "exact_source_dir_cross_split": 0,
+      "tree": {
+        "train": {
+          "sample_directories": 146,
+          "example_directory": "sample_00000",
+          "example_files": [
+            "input.png",
+            "label.png",
+            "target.png",
+            "target_1.png",
+            "target_2.png",
+            "target_3.png",
+            "target_4.png",
+            "target_5.png"
+          ]
+        },
+        "val": {
+          "sample_directories": 42,
+          "example_directory": "sample_00146",
+          "example_files": [
+            "input.png",
+            "label.png",
+            "target.png",
+            "target_1.png",
+            "target_2.png",
+            "target_3.png",
+            "target_4.png",
+            "target_5.png"
+          ]
+        },
+        "test": {
+          "sample_directories": 20,
+          "example_directory": "sample_00188",
+          "example_files": [
+            "input.png",
+            "label.png",
+            "target.png",
+            "target_1.png",
+            "target_2.png",
+            "target_3.png",
+            "target_4.png",
+            "target_5.png"
+          ]
+        }
+      },
+      "out_of_bounds_examples": [],
+      "validation": {
+        "train": {
+          "images": 146,
+          "annotations": 146,
+          "keypoint_count_distribution": {
+            "5": 146
+          },
+          "keypoints": 730,
+          "empty_annotations": 0,
+          "out_of_bounds_points": 0,
+          "out_of_bounds_annotations": 0,
+          "missing_slots": 0,
+          "issues": [],
+          "passed": true
+        },
+        "val": {
+          "images": 42,
+          "annotations": 42,
+          "keypoint_count_distribution": {
+            "5": 42
+          },
+          "keypoints": 210,
+          "empty_annotations": 0,
+          "out_of_bounds_points": 0,
+          "out_of_bounds_annotations": 0,
+          "missing_slots": 0,
+          "issues": [],
+          "passed": true
+        },
+        "test": {
+          "images": 20,
+          "annotations": 20,
+          "keypoint_count_distribution": {
+            "5": 20
+          },
+          "keypoints": 100,
+          "empty_annotations": 0,
+          "out_of_bounds_points": 0,
+          "out_of_bounds_annotations": 0,
+          "missing_slots": 0,
+          "issues": [],
+          "passed": true
+        }
+      },
+      "fixed_head_compatible": true
+    },
+    "acdc": {
+      "split_files": [
+        "acdc/data/train.json",
+        "acdc/data/val.json",
+        "acdc/data/test.json"
+      ],
+      "fields": {
+        "image_path": 738,
+        "target_path": 738,
+        "type": 738,
+        "task": 738,
+        "modality": 738,
+        "dataset": 738,
+        "points": 738,
+        "point_ids": 738,
+        "point_names": 738,
+        "target_point_paths": 738,
+        "source_dir": 738
+      },
+      "point_fields": {
+        "x": 10332,
+        "y": 10332
+      },
+      "path_types": {
+        "image_path:relative": 738,
+        "target_path:relative": 738,
+        "target_point_paths:relative": 10332,
+        "source_dir:windows_absolute": 738
+      },
+      "image_sizes": {
+        "448x896": 738
+      },
+      "image_modes": {
+        "RGB": 738
+      },
+      "image_formats": {
+        "PNG": 738
+      },
+      "grayscale_pixel_images": 738,
+      "input_images": 738,
+      "all_file_extensions": {
+        ".json": 3,
+        ".png": 12546
+      },
+      "unreferenced_input_images": 0,
+      "keypoint_counts": {
+        "14": 738
+      },
+      "point_names": [
+        [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14"
+        ]
+      ],
+      "exact_source_dir_cross_split": 0,
+      "tree": {
+        "train": {
+          "sample_directories": 516,
+          "example_directory": "sample_00000",
+          "example_files": [
+            "input.png",
+            "target.png",
+            "target_1.png",
+            "target_10.png",
+            "target_11.png",
+            "target_12.png",
+            "target_13.png",
+            "target_14.png",
+            "target_2.png",
+            "target_3.png",
+            "target_4.png",
+            "target_5.png",
+            "target_6.png",
+            "target_7.png",
+            "target_8.png",
+            "target_9.png",
+            "vis.png"
+          ]
+        },
+        "val": {
+          "sample_directories": 147,
+          "example_directory": "sample_00516",
+          "example_files": [
+            "input.png",
+            "target.png",
+            "target_1.png",
+            "target_10.png",
+            "target_11.png",
+            "target_12.png",
+            "target_13.png",
+            "target_14.png",
+            "target_2.png",
+            "target_3.png",
+            "target_4.png",
+            "target_5.png",
+            "target_6.png",
+            "target_7.png",
+            "target_8.png",
+            "target_9.png",
+            "vis.png"
+          ]
+        },
+        "test": {
+          "sample_directories": 75,
+          "example_directory": "sample_00663",
+          "example_files": [
+            "input.png",
+            "target.png",
+            "target_1.png",
+            "target_10.png",
+            "target_11.png",
+            "target_12.png",
+            "target_13.png",
+            "target_14.png",
+            "target_2.png",
+            "target_3.png",
+            "target_4.png",
+            "target_5.png",
+            "target_6.png",
+            "target_7.png",
+            "target_8.png",
+            "target_9.png",
+            "vis.png"
+          ]
+        }
+      },
+      "out_of_bounds_examples": [],
+      "validation": {
+        "train": {
+          "images": 516,
+          "annotations": 516,
+          "keypoint_count_distribution": {
+            "14": 516
+          },
+          "keypoints": 7224,
+          "empty_annotations": 0,
+          "out_of_bounds_points": 0,
+          "out_of_bounds_annotations": 0,
+          "missing_slots": 0,
+          "issues": [],
+          "passed": true
+        },
+        "val": {
+          "images": 147,
+          "annotations": 147,
+          "keypoint_count_distribution": {
+            "14": 147
+          },
+          "keypoints": 2058,
+          "empty_annotations": 0,
+          "out_of_bounds_points": 0,
+          "out_of_bounds_annotations": 0,
+          "missing_slots": 0,
+          "issues": [],
+          "passed": true
+        },
+        "test": {
+          "images": 75,
+          "annotations": 75,
+          "keypoint_count_distribution": {
+            "14": 75
+          },
+          "keypoints": 1050,
+          "empty_annotations": 0,
+          "out_of_bounds_points": 0,
+          "out_of_bounds_annotations": 0,
+          "missing_slots": 0,
+          "issues": [],
+          "passed": true
+        }
+      },
+      "fixed_head_compatible": true
+    },
+    "hc18": {
+      "split_files": [
+        "hc18/data/train.json",
+        "hc18/data/val.json",
+        "hc18/data/test.json"
+      ],
+      "fields": {
+        "image_path": 300,
+        "target_path": 300,
+        "label_path": 300,
+        "type": 300,
+        "task": 300,
+        "modality": 300,
+        "dataset": 300,
+        "points": 300,
+        "point_ids": 300,
+        "target_point_paths": 300,
+        "source_dir": 300
+      },
+      "point_fields": {
+        "x": 3900,
+        "y": 3900
+      },
+      "path_types": {
+        "image_path:relative": 300,
+        "target_path:relative": 300,
+        "label_path:relative": 300,
+        "target_point_paths:relative": 3900,
+        "source_dir:windows_absolute": 300
+      },
+      "image_sizes": {
+        "448x896": 300
+      },
+      "image_modes": {
+        "RGB": 300
+      },
+      "image_formats": {
+        "PNG": 300
+      },
+      "grayscale_pixel_images": 300,
+      "input_images": 300,
+      "all_file_extensions": {
+        ".json": 3,
+        ".png": 4800
+      },
+      "unreferenced_input_images": 0,
+      "keypoint_counts": {
+        "13": 300
+      },
+      "point_names": [],
+      "exact_source_dir_cross_split": 0,
+      "tree": {
+        "train": {
+          "sample_directories": 210,
+          "example_directory": "sample_00000",
+          "example_files": [
+            "input.png",
+            "label.png",
+            "target.png",
+            "target_1.png",
+            "target_10.png",
+            "target_11.png",
+            "target_12.png",
+            "target_13.png",
+            "target_2.png",
+            "target_3.png",
+            "target_4.png",
+            "target_5.png",
+            "target_6.png",
+            "target_7.png",
+            "target_8.png",
+            "target_9.png"
+          ]
+        },
+        "val": {
+          "sample_directories": 60,
+          "example_directory": "sample_00210",
+          "example_files": [
+            "input.png",
+            "label.png",
+            "target.png",
+            "target_1.png",
+            "target_10.png",
+            "target_11.png",
+            "target_12.png",
+            "target_13.png",
+            "target_2.png",
+            "target_3.png",
+            "target_4.png",
+            "target_5.png",
+            "target_6.png",
+            "target_7.png",
+            "target_8.png",
+            "target_9.png"
+          ]
+        },
+        "test": {
+          "sample_directories": 30,
+          "example_directory": "sample_00270",
+          "example_files": [
+            "input.png",
+            "label.png",
+            "target.png",
+            "target_1.png",
+            "target_10.png",
+            "target_11.png",
+            "target_12.png",
+            "target_13.png",
+            "target_2.png",
+            "target_3.png",
+            "target_4.png",
+            "target_5.png",
+            "target_6.png",
+            "target_7.png",
+            "target_8.png",
+            "target_9.png"
+          ]
+        }
+      },
+      "out_of_bounds_examples": [],
+      "validation": {
+        "train": {
+          "images": 210,
+          "annotations": 210,
+          "keypoint_count_distribution": {
+            "13": 210
+          },
+          "keypoints": 2730,
+          "empty_annotations": 0,
+          "out_of_bounds_points": 0,
+          "out_of_bounds_annotations": 0,
+          "missing_slots": 0,
+          "issues": [],
+          "passed": true
+        },
+        "val": {
+          "images": 60,
+          "annotations": 60,
+          "keypoint_count_distribution": {
+            "13": 60
+          },
+          "keypoints": 780,
+          "empty_annotations": 0,
+          "out_of_bounds_points": 0,
+          "out_of_bounds_annotations": 0,
+          "missing_slots": 0,
+          "issues": [],
+          "passed": true
+        },
+        "test": {
+          "images": 30,
+          "annotations": 30,
+          "keypoint_count_distribution": {
+            "13": 30
+          },
+          "keypoints": 390,
+          "empty_annotations": 0,
+          "out_of_bounds_points": 0,
+          "out_of_bounds_annotations": 0,
+          "missing_slots": 0,
+          "issues": [],
+          "passed": true
+        }
+      },
+      "fixed_head_compatible": true
+    },
+    "oasis": {
+      "split_files": [
+        "oasis/data/train.json",
+        "oasis/data/val.json",
+        "oasis/data/test.json"
+      ],
+      "fields": {
+        "image_path": 1346,
+        "target_path": 1346,
+        "type": 1346,
+        "task": 1346,
+        "modality": 1346,
+        "dataset": 1346,
+        "points": 1346,
+        "point_ids": 1346,
+        "target_point_paths": 1346,
+        "source_dir": 1346
+      },
+      "point_fields": {
+        "x": 10768,
+        "y": 10768
+      },
+      "path_types": {
+        "image_path:relative": 1346,
+        "target_path:relative": 1346,
+        "target_point_paths:relative": 10768,
+        "source_dir:windows_absolute": 1346
+      },
+      "image_sizes": {
+        "448x896": 1346
+      },
+      "image_modes": {
+        "RGB": 1346
+      },
+      "image_formats": {
+        "PNG": 1346
+      },
+      "grayscale_pixel_images": 1346,
+      "input_images": 1346,
+      "all_file_extensions": {
+        ".json": 3,
+        ".png": 13460
+      },
+      "unreferenced_input_images": 0,
+      "keypoint_counts": {
+        "8": 1346
+      },
+      "point_names": [],
+      "exact_source_dir_cross_split": 0,
+      "tree": {
+        "train": {
+          "sample_directories": 942,
+          "example_directory": "sample_00000",
+          "example_files": [
+            "input.png",
+            "target.png",
+            "target_1.png",
+            "target_2.png",
+            "target_3.png",
+            "target_4.png",
+            "target_5.png",
+            "target_6.png",
+            "target_7.png",
+            "target_8.png"
+          ]
+        },
+        "val": {
+          "sample_directories": 269,
+          "example_directory": "sample_00942",
+          "example_files": [
+            "input.png",
+            "target.png",
+            "target_1.png",
+            "target_2.png",
+            "target_3.png",
+            "target_4.png",
+            "target_5.png",
+            "target_6.png",
+            "target_7.png",
+            "target_8.png"
+          ]
+        },
+        "test": {
+          "sample_directories": 135,
+          "example_directory": "sample_01211",
+          "example_files": [
+            "input.png",
+            "target.png",
+            "target_1.png",
+            "target_2.png",
+            "target_3.png",
+            "target_4.png",
+            "target_5.png",
+            "target_6.png",
+            "target_7.png",
+            "target_8.png"
+          ]
+        }
+      },
+      "out_of_bounds_examples": [],
+      "validation": {
+        "train": {
+          "images": 942,
+          "annotations": 942,
+          "keypoint_count_distribution": {
+            "8": 942
+          },
+          "keypoints": 7536,
+          "empty_annotations": 0,
+          "out_of_bounds_points": 0,
+          "out_of_bounds_annotations": 0,
+          "missing_slots": 0,
+          "issues": [],
+          "passed": true
+        },
+        "val": {
+          "images": 269,
+          "annotations": 269,
+          "keypoint_count_distribution": {
+            "8": 269
+          },
+          "keypoints": 2152,
+          "empty_annotations": 0,
+          "out_of_bounds_points": 0,
+          "out_of_bounds_annotations": 0,
+          "missing_slots": 0,
+          "issues": [],
+          "passed": true
+        },
+        "test": {
+          "images": 135,
+          "annotations": 135,
+          "keypoint_count_distribution": {
+            "8": 135
+          },
+          "keypoints": 1080,
+          "empty_annotations": 0,
+          "out_of_bounds_points": 0,
+          "out_of_bounds_annotations": 0,
+          "missing_slots": 0,
+          "issues": [],
+          "passed": true
+        }
+      },
+      "fixed_head_compatible": true
+    },
+    "Synapse-CT": {
+      "split_files": [
+        "Synapse-CT/data/train.json",
+        "Synapse-CT/data/val.json",
+        "Synapse-CT/data/test.json"
+      ],
+      "fields": {
+        "image_path": 3739,
+        "target_path": 3739,
+        "label_path": 3739,
+        "type": 3739,
+        "task": 3739,
+        "modality": 3739,
+        "dataset": 3739,
+        "points": 3739,
+        "point_ids": 3739,
+        "target_point_paths": 3739,
+        "source_dir": 3739
+      },
+      "point_fields": {
+        "x": 48607,
+        "y": 48607
+      },
+      "path_types": {
+        "image_path:relative": 3739,
+        "target_path:relative": 3739,
+        "label_path:relative": 3739,
+        "target_point_paths:relative": 48607,
+        "source_dir:windows_absolute": 3739
+      },
+      "image_sizes": {
+        "448x896": 3739
+      },
+      "image_modes": {
+        "RGB": 3739
+      },
+      "image_formats": {
+        "PNG": 3739
+      },
+      "grayscale_pixel_images": 3739,
+      "input_images": 3739,
+      "all_file_extensions": {
+        ".json": 3,
+        ".png": 59824
+      },
+      "unreferenced_input_images": 0,
+      "keypoint_counts": {
+        "13": 3739
+      },
+      "point_names": [],
+      "exact_source_dir_cross_split": 0,
+      "tree": {
+        "train": {
+          "sample_directories": 2617,
+          "example_directory": "sample_00000",
+          "example_files": [
+            "input.png",
+            "label.png",
+            "target.png",
+            "target_1.png",
+            "target_10.png",
+            "target_11.png",
+            "target_12.png",
+            "target_13.png",
+            "target_2.png",
+            "target_3.png",
+            "target_4.png",
+            "target_5.png",
+            "target_6.png",
+            "target_7.png",
+            "target_8.png",
+            "target_9.png"
+          ]
+        },
+        "val": {
+          "sample_directories": 748,
+          "example_directory": "sample_02617",
+          "example_files": [
+            "input.png",
+            "label.png",
+            "target.png",
+            "target_1.png",
+            "target_10.png",
+            "target_11.png",
+            "target_12.png",
+            "target_13.png",
+            "target_2.png",
+            "target_3.png",
+            "target_4.png",
+            "target_5.png",
+            "target_6.png",
+            "target_7.png",
+            "target_8.png",
+            "target_9.png"
+          ]
+        },
+        "test": {
+          "sample_directories": 374,
+          "example_directory": "sample_03365",
+          "example_files": [
+            "input.png",
+            "label.png",
+            "target.png",
+            "target_1.png",
+            "target_10.png",
+            "target_11.png",
+            "target_12.png",
+            "target_13.png",
+            "target_2.png",
+            "target_3.png",
+            "target_4.png",
+            "target_5.png",
+            "target_6.png",
+            "target_7.png",
+            "target_8.png",
+            "target_9.png"
+          ]
+        }
+      },
+      "out_of_bounds_examples": [],
+      "validation": {
+        "train": {
+          "images": 2617,
+          "annotations": 2617,
+          "keypoint_count_distribution": {
+            "13": 2617
+          },
+          "keypoints": 34021,
+          "empty_annotations": 0,
+          "out_of_bounds_points": 0,
+          "out_of_bounds_annotations": 0,
+          "missing_slots": 0,
+          "issues": [],
+          "passed": true
+        },
+        "val": {
+          "images": 748,
+          "annotations": 748,
+          "keypoint_count_distribution": {
+            "13": 748
+          },
+          "keypoints": 9724,
+          "empty_annotations": 0,
+          "out_of_bounds_points": 0,
+          "out_of_bounds_annotations": 0,
+          "missing_slots": 0,
+          "issues": [],
+          "passed": true
+        },
+        "test": {
+          "images": 374,
+          "annotations": 374,
+          "keypoint_count_distribution": {
+            "13": 374
+          },
+          "keypoints": 4862,
+          "empty_annotations": 0,
+          "out_of_bounds_points": 0,
+          "out_of_bounds_annotations": 0,
+          "missing_slots": 0,
+          "issues": [],
+          "passed": true
+        }
+      },
+      "fixed_head_compatible": true
+    },
+    "SKI10": {
+      "split_files": [
+        "SKI10/data/train.json",
+        "SKI10/data/val.json",
+        "SKI10/data/test.json"
+      ],
+      "fields": {
+        "image_path": 3755,
+        "target_path": 3755,
+        "type": 3755,
+        "task": 3755,
+        "dataset": 3755,
+        "modality": 3755,
+        "points": 3755,
+        "point_ids": 3755,
+        "target_point_paths": 3755
+      },
+      "point_fields": {
+        "x": 30040,
+        "y": 30040
+      },
+      "path_types": {
+        "image_path:windows_absolute": 3379,
+        "target_path:windows_absolute": 3379,
+        "target_point_paths:windows_absolute": 27032,
+        "image_path:relative": 376,
+        "target_path:relative": 376,
+        "target_point_paths:relative": 3008
+      },
+      "image_sizes": {
+        "448x896": 3755
+      },
+      "image_modes": {
+        "RGB": 3755
+      },
+      "image_formats": {
+        "PNG": 3755
+      },
+      "grayscale_pixel_images": 3755,
+      "input_images": 3755,
+      "all_file_extensions": {
+        ".json": 3,
+        ".png": 37550
+      },
+      "unreferenced_input_images": 0,
+      "keypoint_counts": {
+        "8": 3755
+      },
+      "point_names": [],
+      "exact_source_dir_cross_split": 0,
+      "tree": {
+        "train": {
+          "sample_directories": 2628,
+          "example_directory": "sample_00000",
+          "example_files": [
+            "input.png",
+            "target.png",
+            "target_1.png",
+            "target_2.png",
+            "target_3.png",
+            "target_4.png",
+            "target_5.png",
+            "target_6.png",
+            "target_7.png",
+            "target_8.png"
+          ]
+        },
+        "val": {
+          "sample_directories": 751,
+          "example_directory": "sample_00000",
+          "example_files": [
+            "input.png",
+            "target.png",
+            "target_1.png",
+            "target_2.png",
+            "target_3.png",
+            "target_4.png",
+            "target_5.png",
+            "target_6.png",
+            "target_7.png",
+            "target_8.png"
+          ]
+        },
+        "test": {
+          "sample_directories": 376,
+          "example_directory": "sample_00000",
+          "example_files": [
+            "input.png",
+            "target.png",
+            "target_1.png",
+            "target_2.png",
+            "target_3.png",
+            "target_4.png",
+            "target_5.png",
+            "target_6.png",
+            "target_7.png",
+            "target_8.png"
+          ]
+        }
+      },
+      "out_of_bounds_examples": [],
+      "validation": {
+        "train": {
+          "images": 2628,
+          "annotations": 2628,
+          "keypoint_count_distribution": {
+            "8": 2628
+          },
+          "keypoints": 21024,
+          "empty_annotations": 0,
+          "out_of_bounds_points": 0,
+          "out_of_bounds_annotations": 0,
+          "missing_slots": 0,
+          "issues": [],
+          "passed": true
+        },
+        "val": {
+          "images": 751,
+          "annotations": 751,
+          "keypoint_count_distribution": {
+            "8": 751
+          },
+          "keypoints": 6008,
+          "empty_annotations": 0,
+          "out_of_bounds_points": 0,
+          "out_of_bounds_annotations": 0,
+          "missing_slots": 0,
+          "issues": [],
+          "passed": true
+        },
+        "test": {
+          "images": 376,
+          "annotations": 376,
+          "keypoint_count_distribution": {
+            "8": 376
+          },
+          "keypoints": 3008,
+          "empty_annotations": 0,
+          "out_of_bounds_points": 0,
+          "out_of_bounds_annotations": 0,
+          "missing_slots": 0,
+          "issues": [],
+          "passed": true
+        }
+      },
+      "fixed_head_compatible": true
+    },
+    "ChestX-ray": {
+      "split_files": [
+        "ChestX-ray/data/train.json",
+        "ChestX-ray/data/val.json",
+        "ChestX-ray/data/test.json"
+      ],
+      "fields": {
+        "image_path": 235,
+        "target_path": 235,
+        "label_path": 235,
+        "type": 235,
+        "task": 235,
+        "modality": 235,
+        "dataset": 235,
+        "points": 235,
+        "point_ids": 235,
+        "target_point_paths": 235,
+        "source_dir": 235
+      },
+      "point_fields": {
+        "x": 7520,
+        "y": 7520
+      },
+      "path_types": {
+        "image_path:relative": 235,
+        "target_path:relative": 235,
+        "label_path:relative": 235,
+        "target_point_paths:relative": 7520,
+        "source_dir:windows_absolute": 235
+      },
+      "image_sizes": {
+        "448x896": 235
+      },
+      "image_modes": {
+        "RGB": 235
+      },
+      "image_formats": {
+        "PNG": 235
+      },
+      "grayscale_pixel_images": 235,
+      "input_images": 235,
+      "all_file_extensions": {
+        ".json": 3,
+        ".png": 8460
+      },
+      "unreferenced_input_images": 0,
+      "keypoint_counts": {
+        "32": 235
+      },
+      "point_names": [],
+      "exact_source_dir_cross_split": 0,
+      "tree": {
+        "train": {
+          "sample_directories": 164,
+          "example_directory": "sample_00000",
+          "example_files": [
+            "input.png",
+            "label.png",
+            "target.png",
+            "target_1.png",
+            "target_10.png",
+            "target_11.png",
+            "target_12.png",
+            "target_13.png",
+            "target_14.png",
+            "target_15.png",
+            "target_16.png",
+            "target_17.png",
+            "target_18.png",
+            "target_19.png",
+            "target_2.png",
+            "target_20.png",
+            "target_21.png",
+            "target_22.png",
+            "target_23.png",
+            "target_24.png",
+            "target_25.png",
+            "target_26.png",
+            "target_27.png",
+            "target_28.png",
+            "target_29.png",
+            "target_3.png",
+            "target_30.png",
+            "target_31.png",
+            "target_32.png",
+            "target_4.png",
+            "target_5.png",
+            "target_6.png",
+            "target_7.png",
+            "target_8.png",
+            "target_9.png",
+            "vis.png"
+          ]
+        },
+        "val": {
+          "sample_directories": 47,
+          "example_directory": "sample_00164",
+          "example_files": [
+            "input.png",
+            "label.png",
+            "target.png",
+            "target_1.png",
+            "target_10.png",
+            "target_11.png",
+            "target_12.png",
+            "target_13.png",
+            "target_14.png",
+            "target_15.png",
+            "target_16.png",
+            "target_17.png",
+            "target_18.png",
+            "target_19.png",
+            "target_2.png",
+            "target_20.png",
+            "target_21.png",
+            "target_22.png",
+            "target_23.png",
+            "target_24.png",
+            "target_25.png",
+            "target_26.png",
+            "target_27.png",
+            "target_28.png",
+            "target_29.png",
+            "target_3.png",
+            "target_30.png",
+            "target_31.png",
+            "target_32.png",
+            "target_4.png",
+            "target_5.png",
+            "target_6.png",
+            "target_7.png",
+            "target_8.png",
+            "target_9.png",
+            "vis.png"
+          ]
+        },
+        "test": {
+          "sample_directories": 24,
+          "example_directory": "sample_00211",
+          "example_files": [
+            "input.png",
+            "label.png",
+            "target.png",
+            "target_1.png",
+            "target_10.png",
+            "target_11.png",
+            "target_12.png",
+            "target_13.png",
+            "target_14.png",
+            "target_15.png",
+            "target_16.png",
+            "target_17.png",
+            "target_18.png",
+            "target_19.png",
+            "target_2.png",
+            "target_20.png",
+            "target_21.png",
+            "target_22.png",
+            "target_23.png",
+            "target_24.png",
+            "target_25.png",
+            "target_26.png",
+            "target_27.png",
+            "target_28.png",
+            "target_29.png",
+            "target_3.png",
+            "target_30.png",
+            "target_31.png",
+            "target_32.png",
+            "target_4.png",
+            "target_5.png",
+            "target_6.png",
+            "target_7.png",
+            "target_8.png",
+            "target_9.png",
+            "vis.png"
+          ]
+        }
+      },
+      "out_of_bounds_examples": [],
+      "validation": {
+        "train": {
+          "images": 164,
+          "annotations": 164,
+          "keypoint_count_distribution": {
+            "32": 164
+          },
+          "keypoints": 5248,
+          "empty_annotations": 0,
+          "out_of_bounds_points": 0,
+          "out_of_bounds_annotations": 0,
+          "missing_slots": 0,
+          "issues": [],
+          "passed": true
+        },
+        "val": {
+          "images": 47,
+          "annotations": 47,
+          "keypoint_count_distribution": {
+            "32": 47
+          },
+          "keypoints": 1504,
+          "empty_annotations": 0,
+          "out_of_bounds_points": 0,
+          "out_of_bounds_annotations": 0,
+          "missing_slots": 0,
+          "issues": [],
+          "passed": true
+        },
+        "test": {
+          "images": 24,
+          "annotations": 24,
+          "keypoint_count_distribution": {
+            "32": 24
+          },
+          "keypoints": 768,
+          "empty_annotations": 0,
+          "out_of_bounds_points": 0,
+          "out_of_bounds_annotations": 0,
+          "missing_slots": 0,
+          "issues": [],
+          "passed": true
+        }
+      },
+      "fixed_head_compatible": true
+    },
+    "LUNA16": {
+      "split_files": [
+        "LUNA16/data/train.json",
+        "LUNA16/data/val.json",
+        "LUNA16/data/test.json"
+      ],
+      "fields": {
+        "image_path": 5747,
+        "target_path": 5747,
+        "type": 5747,
+        "task": 5747,
+        "modality": 5747,
+        "dataset": 5747,
+        "points": 5747,
+        "point_ids": 5747,
+        "target_point_paths": 5747,
+        "points_vis_path": 5747
+      },
+      "point_fields": {
+        "x": 151816,
+        "y": 151816
+      },
+      "path_types": {
+        "image_path:relative": 5747,
+        "target_path:relative": 5747,
+        "target_point_paths:relative": 151816,
+        "points_vis_path:relative": 5747
+      },
+      "image_sizes": {
+        "488x896": 5747
+      },
+      "image_modes": {
+        "RGB": 5747
+      },
+      "image_formats": {
+        "PNG": 5747
+      },
+      "grayscale_pixel_images": 5747,
+      "input_images": 5747,
+      "all_file_extensions": {
+        ".json": 3,
+        ".png": 169057
+      },
+      "unreferenced_input_images": 0,
+      "keypoint_counts": {
+        "26": 5348,
+        "32": 399
+      },
+      "point_names": [],
+      "exact_source_dir_cross_split": 0,
+      "tree": {
+        "train": {
+          "sample_directories": 4023,
+          "example_directory": "sample_00000",
+          "example_files": [
+            "input.png",
+            "points_vis.png",
+            "target.png",
+            "target_1.png",
+            "target_10.png",
+            "target_11.png",
+            "target_12.png",
+            "target_13.png",
+            "target_14.png",
+            "target_15.png",
+            "target_16.png",
+            "target_17.png",
+            "target_18.png",
+            "target_19.png",
+            "target_2.png",
+            "target_20.png",
+            "target_21.png",
+            "target_22.png",
+            "target_23.png",
+            "target_24.png",
+            "target_25.png",
+            "target_26.png",
+            "target_3.png",
+            "target_4.png",
+            "target_5.png",
+            "target_6.png",
+            "target_7.png",
+            "target_8.png",
+            "target_9.png"
+          ]
+        },
+        "val": {
+          "sample_directories": 1149,
+          "example_directory": "sample_00000",
+          "example_files": [
+            "input.png",
+            "points_vis.png",
+            "target.png",
+            "target_1.png",
+            "target_10.png",
+            "target_11.png",
+            "target_12.png",
+            "target_13.png",
+            "target_14.png",
+            "target_15.png",
+            "target_16.png",
+            "target_17.png",
+            "target_18.png",
+            "target_19.png",
+            "target_2.png",
+            "target_20.png",
+            "target_21.png",
+            "target_22.png",
+            "target_23.png",
+            "target_24.png",
+            "target_25.png",
+            "target_26.png",
+            "target_3.png",
+            "target_4.png",
+            "target_5.png",
+            "target_6.png",
+            "target_7.png",
+            "target_8.png",
+            "target_9.png"
+          ]
+        },
+        "test": {
+          "sample_directories": 575,
+          "example_directory": "sample_00000",
+          "example_files": [
+            "input.png",
+            "points_vis.png",
+            "target.png",
+            "target_1.png",
+            "target_10.png",
+            "target_11.png",
+            "target_12.png",
+            "target_13.png",
+            "target_14.png",
+            "target_15.png",
+            "target_16.png",
+            "target_17.png",
+            "target_18.png",
+            "target_19.png",
+            "target_2.png",
+            "target_20.png",
+            "target_21.png",
+            "target_22.png",
+            "target_23.png",
+            "target_24.png",
+            "target_25.png",
+            "target_26.png",
+            "target_3.png",
+            "target_4.png",
+            "target_5.png",
+            "target_6.png",
+            "target_7.png",
+            "target_8.png",
+            "target_9.png"
+          ]
+        }
+      },
+      "out_of_bounds_examples": [],
+      "validation": {
+        "train": {
+          "images": 4023,
+          "annotations": 4023,
+          "keypoint_count_distribution": {
+            "26": 3749,
+            "32": 274
+          },
+          "keypoints": 106242,
+          "empty_annotations": 0,
+          "out_of_bounds_points": 0,
+          "out_of_bounds_annotations": 0,
+          "missing_slots": 0,
+          "issues": [],
+          "passed": true
+        },
+        "val": {
+          "images": 1149,
+          "annotations": 1149,
+          "keypoint_count_distribution": {
+            "26": 1059,
+            "32": 90
+          },
+          "keypoints": 30414,
+          "empty_annotations": 0,
+          "out_of_bounds_points": 0,
+          "out_of_bounds_annotations": 0,
+          "missing_slots": 0,
+          "issues": [],
+          "passed": true
+        },
+        "test": {
+          "images": 575,
+          "annotations": 575,
+          "keypoint_count_distribution": {
+            "26": 540,
+            "32": 35
+          },
+          "keypoints": 15160,
+          "empty_annotations": 0,
+          "out_of_bounds_points": 0,
+          "out_of_bounds_annotations": 0,
+          "missing_slots": 0,
+          "issues": [],
+          "passed": true
+        }
+      },
+      "fixed_head_compatible": false
+    }
+  },
+  "note": "COCO structural validity is separate from fixed-head training readiness; no split changes."
+}

@@ -1,0 +1,135 @@
+{
+  "TG3K": {
+    "train": {
+      "status": "passed",
+      "loaded_samples": 146,
+      "keypoints": 5
+    },
+    "val": {
+      "status": "passed",
+      "loaded_samples": 42,
+      "keypoints": 5
+    },
+    "test": {
+      "status": "passed",
+      "loaded_samples": 20,
+      "keypoints": 5
+    }
+  },
+  "acdc": {
+    "train": {
+      "status": "passed",
+      "loaded_samples": 516,
+      "keypoints": 14
+    },
+    "val": {
+      "status": "passed",
+      "loaded_samples": 147,
+      "keypoints": 14
+    },
+    "test": {
+      "status": "passed",
+      "loaded_samples": 75,
+      "keypoints": 14
+    }
+  },
+  "hc18": {
+    "train": {
+      "status": "passed",
+      "loaded_samples": 210,
+      "keypoints": 13
+    },
+    "val": {
+      "status": "passed",
+      "loaded_samples": 60,
+      "keypoints": 13
+    },
+    "test": {
+      "status": "passed",
+      "loaded_samples": 30,
+      "keypoints": 13
+    }
+  },
+  "oasis": {
+    "train": {
+      "status": "passed",
+      "loaded_samples": 942,
+      "keypoints": 8
+    },
+    "val": {
+      "status": "passed",
+      "loaded_samples": 269,
+      "keypoints": 8
+    },
+    "test": {
+      "status": "passed",
+      "loaded_samples": 135,
+      "keypoints": 8
+    }
+  },
+  "Synapse-CT": {
+    "train": {
+      "status": "passed",
+      "loaded_samples": 2617,
+      "keypoints": 13
+    },
+    "val": {
+      "status": "passed",
+      "loaded_samples": 748,
+      "keypoints": 13
+    },
+    "test": {
+      "status": "passed",
+      "loaded_samples": 374,
+      "keypoints": 13
+    }
+  },
+  "SKI10": {
+    "train": {
+      "status": "passed",
+      "loaded_samples": 2628,
+      "keypoints": 8
+    },
+    "val": {
+      "status": "passed",
+      "loaded_samples": 751,
+      "keypoints": 8
+    },
+    "test": {
+      "status": "passed",
+      "loaded_samples": 376,
+      "keypoints": 8
+    }
+  },
+  "ChestX-ray": {
+    "train": {
+      "status": "passed",
+      "loaded_samples": 164,
+      "keypoints": 32
+    },
+    "val": {
+      "status": "passed",
+      "loaded_samples": 47,
+      "keypoints": 32
+    },
+    "test": {
+      "status": "passed",
+      "loaded_samples": 24,
+      "keypoints": 32
+    }
+  },
+  "LUNA16": {
+    "train": {
+      "status": "blocked",
+      "reason": "Multiple keypoint schemas; fixed-K loader is incompatible"
+    },
+    "val": {
+      "status": "blocked",
+      "reason": "Multiple keypoint schemas; fixed-K loader is incompatible"
+    },
+    "test": {
+      "status": "blocked",
+      "reason": "Multiple keypoint schemas; fixed-K loader is incompatible"
+    }
+  }
+}

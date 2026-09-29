@@ -1,0 +1,128 @@
+{
+  "train": {
+    "TG3K": {
+      "shared_records": 146,
+      "local_records": 146,
+      "same_images_points_ids": true
+    },
+    "acdc": {
+      "shared_records": 516,
+      "local_records": 516,
+      "same_images_points_ids": true
+    },
+    "hc18": {
+      "shared_records": 210,
+      "local_records": 210,
+      "same_images_points_ids": true
+    },
+    "oasis": {
+      "shared_records": 942,
+      "local_records": 942,
+      "same_images_points_ids": true
+    },
+    "Synapse-CT": {
+      "shared_records": 2617,
+      "local_records": 2617,
+      "same_images_points_ids": true
+    },
+    "SKI10": {
+      "shared_records": 2628,
+      "local_records": 2628,
+      "same_images_points_ids": true
+    },
+    "ChestX-ray": {
+      "shared_records": 164,
+      "local_records": 164,
+      "same_images_points_ids": true
+    },
+    "LUNA16": {
+      "shared_records": 4023,
+      "local_records": 4023,
+      "same_images_points_ids": true
+    }
+  },
+  "val": {
+    "TG3K": {
+      "shared_records": 42,
+      "local_records": 42,
+      "same_images_points_ids": true
+    },
+    "acdc": {
+      "shared_records": 147,
+      "local_records": 147,
+      "same_images_points_ids": true
+    },
+    "hc18": {
+      "shared_records": 60,
+      "local_records": 60,
+      "same_images_points_ids": true
+    },
+    "oasis": {
+      "shared_records": 269,
+      "local_records": 269,
+      "same_images_points_ids": true
+    },
+    "Synapse-CT": {
+      "shared_records": 748,
+      "local_records": 748,
+      "same_images_points_ids": true
+    },
+    "SKI10": {
+      "shared_records": 751,
+      "local_records": 751,
+      "same_images_points_ids": true
+    },
+    "ChestX-ray": {
+      "shared_records": 47,
+      "local_records": 47,
+      "same_images_points_ids": true
+    },
+    "LUNA16": {
+      "shared_records": 1149,
+      "local_records": 1149,
+      "same_images_points_ids": true
+    }
+  },
+  "test": {
+    "TG3K": {
+      "shared_records": 20,
+      "local_records": 20,
+      "same_images_points_ids": true
+    },
+    "acdc": {
+      "shared_records": 75,
+      "local_records": 75,
+      "same_images_points_ids": true
+    },
+    "hc18": {
+      "shared_records": 30,
+      "local_records": 30,
+      "same_images_points_ids": true
+    },
+    "oasis": {
+      "shared_records": 135,
+      "local_records": 135,
+      "same_images_points_ids": true
+    },
+    "Synapse-CT": {
+      "shared_records": 374,
+      "local_records": 374,
+      "same_images_points_ids": true
+    },
+    "SKI10": {
+      "shared_records": 376,
+      "local_records": 376,
+      "same_images_points_ids": true
+    },
+    "ChestX-ray": {
+      "shared_records": 24,
+      "local_records": 24,
+      "same_images_points_ids": true
+    },
+    "LUNA16": {
+      "shared_records": 575,
+      "local_records": 575,
+      "same_images_points_ids": true
+    }
+  }
+}
