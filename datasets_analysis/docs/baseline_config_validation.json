@@ -1,0 +1,398 @@
+{
+  "datasets": {
+    "acdc": {
+      "config": "configs/body/2d_kpt_sview_rgb_img/topdown_heatmap/acdc/ViTPose_base_acdc_256x192.py",
+      "splits": {
+        "train": {
+          "images": 516,
+          "annotations": 516,
+          "keypoints": 14,
+          "all_image_paths_exist": true,
+          "first_batch_shape": [
+            8,
+            3,
+            256,
+            192
+          ],
+          "heatmap_shape": [
+            8,
+            14,
+            64,
+            48
+          ],
+          "gt_self_check_mre": 0.0,
+          "annotation_sha256": "a6d9a8d889ad44de81191375334c05b16082083b1e44e2b18b97c74d282296cc"
+        },
+        "val": {
+          "images": 147,
+          "annotations": 147,
+          "keypoints": 14,
+          "all_image_paths_exist": true,
+          "first_batch_shape": [
+            8,
+            3,
+            256,
+            192
+          ],
+          "heatmap_shape": null,
+          "gt_self_check_mre": 0.0,
+          "annotation_sha256": "a33f3efeabe222c0456ff83281033b3c0420f6e3490cd7f32bc18fbe89f62eee"
+        },
+        "test": {
+          "images": 75,
+          "annotations": 75,
+          "keypoints": 14,
+          "all_image_paths_exist": true,
+          "first_batch_shape": [
+            8,
+            3,
+            256,
+            192
+          ],
+          "heatmap_shape": null,
+          "gt_self_check_mre": 0.0,
+          "annotation_sha256": "83944ae437c0ee5443720166b520632e5c7b6f19ffb72313d302df86afd3adae"
+        }
+      },
+      "passed": true
+    },
+    "hc18": {
+      "config": "configs/body/2d_kpt_sview_rgb_img/topdown_heatmap/hc18/ViTPose_base_hc18_256x192.py",
+      "splits": {
+        "train": {
+          "images": 210,
+          "annotations": 210,
+          "keypoints": 13,
+          "all_image_paths_exist": true,
+          "first_batch_shape": [
+            8,
+            3,
+            256,
+            192
+          ],
+          "heatmap_shape": [
+            8,
+            13,
+            64,
+            48
+          ],
+          "gt_self_check_mre": 7.617309581008316e-07,
+          "annotation_sha256": "a05135731f4a9f8877d5af3dff4ae6cea80230ad05e3acd2f6407f415e027f32"
+        },
+        "val": {
+          "images": 60,
+          "annotations": 60,
+          "keypoints": 13,
+          "all_image_paths_exist": true,
+          "first_batch_shape": [
+            8,
+            3,
+            256,
+            192
+          ],
+          "heatmap_shape": null,
+          "gt_self_check_mre": 7.36926025004161e-07,
+          "annotation_sha256": "2ae8213966b7174667feba7a1be64f1388f209accbc749d51aa478cb09dab515"
+        },
+        "test": {
+          "images": 30,
+          "annotations": 30,
+          "keypoints": 13,
+          "all_image_paths_exist": true,
+          "first_batch_shape": [
+            8,
+            3,
+            256,
+            192
+          ],
+          "heatmap_shape": null,
+          "gt_self_check_mre": 8.116400967321017e-07,
+          "annotation_sha256": "f2ff12c4f1575e5f5432cd9a267ec98a7e247104c49c7c00f7b8ecca80e83d52"
+        }
+      },
+      "passed": true
+    },
+    "oasis": {
+      "config": "configs/body/2d_kpt_sview_rgb_img/topdown_heatmap/oasis/ViTPose_base_oasis_256x192.py",
+      "splits": {
+        "train": {
+          "images": 942,
+          "annotations": 942,
+          "keypoints": 8,
+          "all_image_paths_exist": true,
+          "first_batch_shape": [
+            8,
+            3,
+            256,
+            192
+          ],
+          "heatmap_shape": [
+            8,
+            8,
+            64,
+            48
+          ],
+          "gt_self_check_mre": 0.0,
+          "annotation_sha256": "4d13ed0f79a72e88d5457d1fb3e57a9ae0ea0b275c910d0a166acbf2d2170e7d"
+        },
+        "val": {
+          "images": 269,
+          "annotations": 269,
+          "keypoints": 8,
+          "all_image_paths_exist": true,
+          "first_batch_shape": [
+            8,
+            3,
+            256,
+            192
+          ],
+          "heatmap_shape": null,
+          "gt_self_check_mre": 0.0,
+          "annotation_sha256": "e2d5dd2837e2c01aeda84d72a6a22cd0ac192d95854df69df745717268ea50aa"
+        },
+        "test": {
+          "images": 135,
+          "annotations": 135,
+          "keypoints": 8,
+          "all_image_paths_exist": true,
+          "first_batch_shape": [
+            8,
+            3,
+            256,
+            192
+          ],
+          "heatmap_shape": null,
+          "gt_self_check_mre": 0.0,
+          "annotation_sha256": "4648cfdf53ef3eb8652bd9c65f866a62d7ae19ee2b30d66fe55c0095276c4980"
+        }
+      },
+      "passed": true
+    },
+    "Synapse-CT": {
+      "config": "configs/body/2d_kpt_sview_rgb_img/topdown_heatmap/synapse_ct/ViTPose_base_synapse_ct_256x192.py",
+      "splits": {
+        "train": {
+          "images": 2617,
+          "annotations": 2617,
+          "keypoints": 13,
+          "all_image_paths_exist": true,
+          "first_batch_shape": [
+            8,
+            3,
+            256,
+            192
+          ],
+          "heatmap_shape": [
+            8,
+            13,
+            64,
+            48
+          ],
+          "gt_self_check_mre": 9.426797257133413e-07,
+          "annotation_sha256": "62ca62844cb62bb3298817e1e3c95d8c8123d1a30c904bf32d15f1b5f24c3213"
+        },
+        "val": {
+          "images": 748,
+          "annotations": 748,
+          "keypoints": 13,
+          "all_image_paths_exist": true,
+          "first_batch_shape": [
+            8,
+            3,
+            256,
+            192
+          ],
+          "heatmap_shape": null,
+          "gt_self_check_mre": 9.344314973406175e-07,
+          "annotation_sha256": "d02f35b0da941884460e282a717be16a73c94ee97dc92baad42447d3cfc7c53e"
+        },
+        "test": {
+          "images": 374,
+          "annotations": 374,
+          "keypoints": 13,
+          "all_image_paths_exist": true,
+          "first_batch_shape": [
+            8,
+            3,
+            256,
+            192
+          ],
+          "heatmap_shape": null,
+          "gt_self_check_mre": 9.66106673121698e-07,
+          "annotation_sha256": "e92cc9ba1aa6ffb937ce27cf1f080e7161b2401579fa7878943994ce57a3638e"
+        }
+      },
+      "passed": true
+    },
+    "SKI10": {
+      "config": "configs/body/2d_kpt_sview_rgb_img/topdown_heatmap/ski10/ViTPose_base_ski10_256x192.py",
+      "splits": {
+        "train": {
+          "images": 2628,
+          "annotations": 2628,
+          "keypoints": 8,
+          "all_image_paths_exist": true,
+          "first_batch_shape": [
+            8,
+            3,
+            256,
+            192
+          ],
+          "heatmap_shape": [
+            8,
+            8,
+            64,
+            48
+          ],
+          "gt_self_check_mre": 0.0,
+          "annotation_sha256": "06832033f19d12547115e67ce364365d314abbb2cba063ec814e8c14d0c8e1ea"
+        },
+        "val": {
+          "images": 751,
+          "annotations": 751,
+          "keypoints": 8,
+          "all_image_paths_exist": true,
+          "first_batch_shape": [
+            8,
+            3,
+            256,
+            192
+          ],
+          "heatmap_shape": null,
+          "gt_self_check_mre": 0.0,
+          "annotation_sha256": "05aee1b0bf2fa1486cc7b024f00f80bd1013b9ea1b5e66967249c50aa18cfa88"
+        },
+        "test": {
+          "images": 376,
+          "annotations": 376,
+          "keypoints": 8,
+          "all_image_paths_exist": true,
+          "first_batch_shape": [
+            8,
+            3,
+            256,
+            192
+          ],
+          "heatmap_shape": null,
+          "gt_self_check_mre": 0.0,
+          "annotation_sha256": "5626323f47e08dfc65fa80af31b711510ff21dfdebfa8fb4b3ed1138fb6db41e"
+        }
+      },
+      "passed": true
+    },
+    "ChestX-ray": {
+      "config": "configs/body/2d_kpt_sview_rgb_img/topdown_heatmap/chestxray/ViTPose_base_chestxray_256x192.py",
+      "splits": {
+        "train": {
+          "images": 164,
+          "annotations": 164,
+          "keypoints": 32,
+          "all_image_paths_exist": true,
+          "first_batch_shape": [
+            8,
+            3,
+            256,
+            192
+          ],
+          "heatmap_shape": [
+            8,
+            32,
+            64,
+            48
+          ],
+          "gt_self_check_mre": 6.384332867040635e-07,
+          "annotation_sha256": "c667d11c142f5c22c6c0d9c428d70c54fee5b36f6e90a7194dded4adebe7f9e2"
+        },
+        "val": {
+          "images": 47,
+          "annotations": 47,
+          "keypoints": 32,
+          "all_image_paths_exist": true,
+          "first_batch_shape": [
+            8,
+            3,
+            256,
+            192
+          ],
+          "heatmap_shape": null,
+          "gt_self_check_mre": 6.198276436308705e-07,
+          "annotation_sha256": "dab996056bc46f1596b43a7ed901589f3ea547a568f2d274776cc9acea91a6d8"
+        },
+        "test": {
+          "images": 24,
+          "annotations": 24,
+          "keypoints": 32,
+          "all_image_paths_exist": true,
+          "first_batch_shape": [
+            8,
+            3,
+            256,
+            192
+          ],
+          "heatmap_shape": null,
+          "gt_self_check_mre": 6.494544119406167e-07,
+          "annotation_sha256": "586b78ada5d537d143b4d2b6a6863d187c02f608265b08fa8a286494bdbdcbed"
+        }
+      },
+      "passed": true
+    },
+    "LUNA16_26": {
+      "config": "configs/body/2d_kpt_sview_rgb_img/topdown_heatmap/luna16_26/ViTPose_base_luna16_26_256x192.py",
+      "splits": {
+        "train": {
+          "images": 3749,
+          "annotations": 3749,
+          "keypoints": 26,
+          "all_image_paths_exist": true,
+          "first_batch_shape": [
+            8,
+            3,
+            256,
+            192
+          ],
+          "heatmap_shape": [
+            8,
+            26,
+            64,
+            48
+          ],
+          "gt_self_check_mre": 8.765224305158824e-07,
+          "annotation_sha256": "5ad5526178d91561e9c7e94b336acb7871b2fba1df402e418c7e5b4d3b227b8d"
+        },
+        "val": {
+          "images": 1059,
+          "annotations": 1059,
+          "keypoints": 26,
+          "all_image_paths_exist": true,
+          "first_batch_shape": [
+            8,
+            3,
+            256,
+            192
+          ],
+          "heatmap_shape": null,
+          "gt_self_check_mre": 8.848792670023415e-07,
+          "annotation_sha256": "aa6dd511861dc14c6411a06e08b665bf470d676d8e2306cac92b36ae049ddf40"
+        },
+        "test": {
+          "images": 540,
+          "annotations": 540,
+          "keypoints": 26,
+          "all_image_paths_exist": true,
+          "first_batch_shape": [
+            8,
+            3,
+            256,
+            192
+          ],
+          "heatmap_shape": null,
+          "gt_self_check_mre": 8.810061800648936e-07,
+          "annotation_sha256": "0813a9e644744d05e511c53c5664d27e982d59ec4282417eb912e85f8aada3bd"
+        }
+      },
+      "passed": true
+    }
+  },
+  "protected_input_hashes_unchanged": true,
+  "scope": "All records/path checks + one actual transformed batch per split + GT metric self-check; no model/training/inference"
+}

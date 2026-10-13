@@ -1,0 +1,104 @@
+{
+  "template": "configs/body/2d_kpt_sview_rgb_img/topdown_heatmap/tg3k/ViTPose_base_tg3k_256x192.py",
+  "template_sha256": "0057f191862ca48b27ec0cd3f0330d3446a950d36122907df76646de9938e8da",
+  "datasets": [
+    {
+      "dataset": "acdc",
+      "slug": "acdc",
+      "keypoints": 14,
+      "gpu": 1,
+      "config": "configs/body/2d_kpt_sview_rgb_img/topdown_heatmap/acdc/ViTPose_base_acdc_256x192.py",
+      "dataset_info": "configs/_base_/datasets/acdc.py",
+      "work_dir": "work_dirs/vitpose_base_acdc_256x192",
+      "counts": {
+        "train": 516,
+        "val": 147,
+        "test": 75
+      }
+    },
+    {
+      "dataset": "hc18",
+      "slug": "hc18",
+      "keypoints": 13,
+      "gpu": 0,
+      "config": "configs/body/2d_kpt_sview_rgb_img/topdown_heatmap/hc18/ViTPose_base_hc18_256x192.py",
+      "dataset_info": "configs/_base_/datasets/hc18.py",
+      "work_dir": "work_dirs/vitpose_base_hc18_256x192",
+      "counts": {
+        "train": 210,
+        "val": 60,
+        "test": 30
+      }
+    },
+    {
+      "dataset": "oasis",
+      "slug": "oasis",
+      "keypoints": 8,
+      "gpu": 1,
+      "config": "configs/body/2d_kpt_sview_rgb_img/topdown_heatmap/oasis/ViTPose_base_oasis_256x192.py",
+      "dataset_info": "configs/_base_/datasets/oasis.py",
+      "work_dir": "work_dirs/vitpose_base_oasis_256x192",
+      "counts": {
+        "train": 942,
+        "val": 269,
+        "test": 135
+      }
+    },
+    {
+      "dataset": "Synapse-CT",
+      "slug": "synapse_ct",
+      "keypoints": 13,
+      "gpu": 0,
+      "config": "configs/body/2d_kpt_sview_rgb_img/topdown_heatmap/synapse_ct/ViTPose_base_synapse_ct_256x192.py",
+      "dataset_info": "configs/_base_/datasets/synapse_ct.py",
+      "work_dir": "work_dirs/vitpose_base_synapse_ct_256x192",
+      "counts": {
+        "train": 2617,
+        "val": 748,
+        "test": 374
+      }
+    },
+    {
+      "dataset": "SKI10",
+      "slug": "ski10",
+      "keypoints": 8,
+      "gpu": 0,
+      "config": "configs/body/2d_kpt_sview_rgb_img/topdown_heatmap/ski10/ViTPose_base_ski10_256x192.py",
+      "dataset_info": "configs/_base_/datasets/ski10.py",
+      "work_dir": "work_dirs/vitpose_base_ski10_256x192",
+      "counts": {
+        "train": 2628,
+        "val": 751,
+        "test": 376
+      }
+    },
+    {
+      "dataset": "ChestX-ray",
+      "slug": "chestxray",
+      "keypoints": 32,
+      "gpu": 1,
+      "config": "configs/body/2d_kpt_sview_rgb_img/topdown_heatmap/chestxray/ViTPose_base_chestxray_256x192.py",
+      "dataset_info": "configs/_base_/datasets/chestxray.py",
+      "work_dir": "work_dirs/vitpose_base_chestxray_256x192",
+      "counts": {
+        "train": 164,
+        "val": 47,
+        "test": 24
+      }
+    },
+    {
+      "dataset": "LUNA16_26",
+      "slug": "luna16_26",
+      "keypoints": 26,
+      "gpu": 1,
+      "config": "configs/body/2d_kpt_sview_rgb_img/topdown_heatmap/luna16_26/ViTPose_base_luna16_26_256x192.py",
+      "dataset_info": "configs/_base_/datasets/luna16_26.py",
+      "work_dir": "work_dirs/vitpose_base_luna16_26_256x192",
+      "counts": {
+        "train": 3749,
+        "val": 1059,
+        "test": 540
+      }
+    }
+  ]
+}
