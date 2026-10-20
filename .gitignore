@@ -212,3 +212,8 @@ data/
 # OS files
 .DS_Store
 Thumbs.db
+# Medical keypoint GT/prediction overlays (generated experiment artifacts)
+/results/visualizations/
+
+# Full first-run medical visualization galleries (requested directory spelling)
+/results/visaulization/
