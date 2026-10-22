@@ -45,6 +45,112 @@ class MetricsTest(unittest.TestCase):
         self.assertEqual(r['overall']['pck'], {'0.09': .5, '0.1': 1.0})
         self.assertEqual(r['overall']['coordinate_mse'], 6.25)
 
+    def test_physical_distance_and_squared_units(self):
+        pred, gt = fixture()
+        original = copy.deepcopy((pred, gt))
+        # Two annotated errors: (3,4) px and (0,0) px.
+        # At 2 mm/px these are 10 mm and 0 mm radial errors.
+        r = evaluate(pred, gt, [2, 5, 10], 'mm', pixel_spacing_mm=2)
+        self.assertEqual(r['overall']['coordinate_mse'], 25)
+        self.assertEqual(r['overall']['rmse'], 5)
+        self.assertEqual(r['overall']['mae'], 3.5)
+        self.assertEqual(r['overall']['mean_euclidean_distance_error'], 5)
+        self.assertEqual(r['overall']['pck'], {'2': .5, '5': .5, '10': 1})
+        self.assertEqual(r['per_keypoint'][0]['mean_euclidean_distance_error'], 10)
+        self.assertIsNone(r['per_keypoint'][1]['rmse'])
+        self.assertEqual(r['units']['coordinate_mse'], 'mm^2')
+        self.assertEqual(r['units']['pck'], 'fraction')
+        self.assertEqual(r['pck_threshold_unit'], 'mm')
+        self.assertEqual((pred, gt), original)
+
+    def test_requested_dataset_calibrations(self):
+        pred, gt = fixture()
+        for spacing in (1.5625, 1.4, .108):
+            with self.subTest(spacing=spacing):
+                r = evaluate(pred, gt, [2, 5, 10, 20], 'mm', spacing)['overall']
+                self.assertAlmostEqual(r['coordinate_mse'], 6.25 * spacing**2)
+                self.assertAlmostEqual(r['rmse'], 2.5 * spacing)
+                self.assertAlmostEqual(r['mae'], 1.75 * spacing)
+                self.assertAlmostEqual(r['mean_euclidean_distance_error'], 2.5 * spacing)
+
+    def test_no_pck_pixel_and_physical_reports(self):
+        pred, gt = fixture()
+        for spacing in (None, 1.5625, 1.4, .108):
+            with self.subTest(spacing=spacing):
+                result = evaluate(pred, gt, thresholds=None, pixel_spacing_mm=spacing)
+                self.assertFalse(any(key.startswith('pck') for key in result))
+                self.assertNotIn('pck', result['units'])
+                self.assertNotIn('pck', result['overall'])
+                for keypoint in result['per_keypoint']:
+                    self.assertNotIn('pck', keypoint)
+                self.assertAlmostEqual(result['overall']['mean_euclidean_distance_error'],
+                                       2.5 * (spacing or 1))
+
+    def test_missing_invalid_or_inconsistent_spacing_rejected(self):
+        pred, gt = fixture()
+        for spacing in (None, 0, -1, float('inf'), float('nan'), True, [1, 2], '1.4'):
+            with self.subTest(spacing=spacing), self.assertRaises(ValueError):
+                evaluate(pred, gt, pck_unit='mm', pixel_spacing_mm=spacing)
+        with self.assertRaises(ValueError):
+            evaluate(pred, gt, pck_unit='pixels', pixel_spacing_mm=1.4)
+
+    def test_cli_uses_prediction_calibration_without_a_model(self):
+        pred, gt = fixture()
+        pred['metadata'] = dict(evaluation=dict(
+            metric=['MRE', 'MSE', 'RMSE', 'MAE'], pixel_spacing_mm=2))
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp = Path(tmp)
+            (tmp/'pred.json').write_text(json.dumps(pred))
+            (tmp/'gt.json').write_text(json.dumps(gt))
+            run = subprocess.run([
+                sys.executable, str(ROOT/'datasets_analysis/tools/evaluate_medical_keypoints.py'),
+                '--predictions', str(tmp/'pred.json'), '--gt', str(tmp/'gt.json'),
+                '--out', str(tmp/'metrics.json')], capture_output=True, text=True)
+            self.assertEqual(run.returncode, 0, run.stdout + run.stderr)
+            result = json.loads((tmp/'metrics.json').read_text())
+            self.assertEqual(result['overall']['mean_euclidean_distance_error'], 5)
+            self.assertEqual(result['units']['rmse'], 'mm')
+            self.assertNotIn('pck', result['overall'])
+
+    def test_cli_physical_config_without_pck_or_model(self):
+        pred, gt = fixture()
+        # A test-set report can also use the exact new training evaluation config
+        # when evaluating predictions generated before metadata was introduced.
+        config = ROOT/'configs/body/2d_kpt_sview_rgb_img/topdown_heatmap/painter3d/ViTPose_base_hc18_256x192.py'
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp = Path(tmp)
+            (tmp/'pred.json').write_text(json.dumps(pred))
+            (tmp/'gt.json').write_text(json.dumps(gt))
+            run = subprocess.run([
+                sys.executable, str(ROOT/'datasets_analysis/tools/evaluate_medical_keypoints.py'),
+                '--predictions', str(tmp/'pred.json'), '--gt', str(tmp/'gt.json'),
+                '--out', str(tmp/'metrics.json'), '--config', str(config)],
+                capture_output=True, text=True)
+            self.assertEqual(run.returncode, 0, run.stdout + run.stderr)
+            result = json.loads((tmp/'metrics.json').read_text())
+            self.assertAlmostEqual(result['overall']['mean_euclidean_distance_error'], .27)
+            self.assertEqual(result['units']['rmse'], 'mm')
+            self.assertNotIn('pck', result['overall'])
+            self.assertEqual(set(result['metrics']), {'MRE', 'MSE', 'RMSE', 'MAE'})
+
+    def test_cli_legacy_diagonal_override_uses_diagonal_thresholds(self):
+        pred, gt = fixture()
+        pred['metadata'] = dict(evaluation=dict(
+            metric=['MRE', 'PCK'], pck_unit='pixels', pck_thresholds=[2, 5, 10, 20]))
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp = Path(tmp)
+            (tmp/'pred.json').write_text(json.dumps(pred))
+            (tmp/'gt.json').write_text(json.dumps(gt))
+            run = subprocess.run([
+                sys.executable, str(ROOT/'datasets_analysis/tools/evaluate_medical_keypoints.py'),
+                '--predictions', str(tmp/'pred.json'), '--gt', str(tmp/'gt.json'),
+                '--out', str(tmp/'metrics.json'), '--pck-unit', 'image_diagonal'],
+                capture_output=True, text=True)
+            self.assertEqual(run.returncode, 0, run.stdout + run.stderr)
+            result = json.loads((tmp/'metrics.json').read_text())
+            self.assertEqual(result['pck_thresholds'], [.01, .02, .05, .1])
+            self.assertEqual(result['overall']['pck']['0.1'], 1)
+
     def test_missing_duplicate_unknown_rejected(self):
         for kind in ('missing', 'duplicate', 'unknown'):
             pred, gt = fixture()

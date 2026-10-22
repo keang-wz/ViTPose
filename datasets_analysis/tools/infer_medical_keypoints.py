@@ -90,11 +90,16 @@ def main():
             print(f'Inference batch {i}/{len(loader)}', flush=True)
     prediction = prediction_from_outputs(outputs, gt, dc.img_prefix)
     # Validate coverage/finite values before emitting any usable prediction file.
-    evaluate(prediction, gt)
+    evaluate(prediction, gt, thresholds=None)
     prediction['metadata'] = dict(config=str(args.config), checkpoint=str(args.checkpoint),
         config_sha256=sha256(args.config), checkpoint_sha256=sha256(args.checkpoint),
         annotation_sha256=sha256(args.test_json), roi='GT bbox (full-image ROI for converted medical datasets)',
         device=args.device, images=len(images), model_head_channels=k)
+    # Preserve the validation calibration for later standalone test evaluation.
+    # Coordinates remain original-image pixels so unknown spacing can be added later.
+    prediction['metadata']['evaluation'] = {
+        key: cfg.evaluation[key] for key in
+        ('metric', 'pck_thresholds', 'pck_unit', 'pixel_spacing_mm') if key in cfg.evaluation}
     write_json(args.out, prediction, protected=[args.config, args.checkpoint, args.test_json])
     print(f'Saved {len(prediction["predictions"])} predictions: {args.out}')
 

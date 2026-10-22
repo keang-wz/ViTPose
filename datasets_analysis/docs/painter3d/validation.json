@@ -1,0 +1,405 @@
+{
+  "acdc": {
+    "passed": true,
+    "training_settings_unchanged": true,
+    "config": "/home/wzk/WorkSpace/ViTPose/configs/body/2d_kpt_sview_rgb_img/topdown_heatmap/painter3d/ViTPose_base_acdc_256x192.py",
+    "work_dir": "work_dirs/painter3d_seed42/acdc",
+    "evaluation": {
+      "interval": 10,
+      "metric": [
+        "MRE",
+        "MSE",
+        "RMSE",
+        "MAE"
+      ],
+      "pixel_spacing_mm": 1.5625,
+      "save_best": "MRE_mm",
+      "rule": "less"
+    },
+    "metric_units": "mm (MSE: mm^2)",
+    "splits": {
+      "train": {
+        "images": 516,
+        "annotation_file": "datasets_analysis/coco_format/painter3d/acdc/annotations/train.json",
+        "image_root": "/data/users/mqf/Painter-3D/data/",
+        "batch_shape": [
+          8,
+          3,
+          256,
+          192
+        ],
+        "target_shape": [
+          8,
+          14,
+          64,
+          48
+        ],
+        "annotation_sha256": "f5eeca140d33eb1a94687d44d49e0b11b11be956be98a7140175beaf70c4d0e4",
+        "gt_self_check": {
+          "MSE_mm2": 0.0,
+          "RMSE_mm": 0.0,
+          "MAE_mm": 0.0,
+          "MRE_mm": 0.0
+        },
+        "synthetic_3_4_pixel_offset_metrics": {
+          "MSE_mm2": 30.517578125,
+          "RMSE_mm": 5.524271728019903,
+          "MAE_mm": 5.46875,
+          "MRE_mm": 7.8125
+        }
+      },
+      "val": {
+        "images": 147,
+        "annotation_file": "datasets_analysis/coco_format/painter3d/acdc/annotations/val.json",
+        "image_root": "/data/users/mqf/Painter-3D/data/",
+        "batch_shape": [
+          8,
+          3,
+          256,
+          192
+        ],
+        "target_shape": null,
+        "annotation_sha256": "0d11b9e08ce6546a7d54c5fc8c52e4a1c3621e8172a9d37cd65707bf446c3e9e",
+        "gt_self_check": {
+          "MSE_mm2": 0.0,
+          "RMSE_mm": 0.0,
+          "MAE_mm": 0.0,
+          "MRE_mm": 0.0
+        },
+        "synthetic_3_4_pixel_offset_metrics": {
+          "MSE_mm2": 30.517578125,
+          "RMSE_mm": 5.524271728019903,
+          "MAE_mm": 5.46875,
+          "MRE_mm": 7.8125
+        }
+      },
+      "test": {
+        "images": 75,
+        "annotation_file": "datasets_analysis/coco_format/painter3d/acdc/annotations/test.json",
+        "image_root": "/data/users/mqf/Painter-3D/data/",
+        "batch_shape": [
+          8,
+          3,
+          256,
+          192
+        ],
+        "target_shape": null,
+        "annotation_sha256": "df13c2270daad5925d46ccf4ee6fd94f26eaaaadf7ea7cdf07a4f55f0fa81a88",
+        "gt_self_check": {
+          "MSE_mm2": 0.0,
+          "RMSE_mm": 0.0,
+          "MAE_mm": 0.0,
+          "MRE_mm": 0.0
+        },
+        "synthetic_3_4_pixel_offset_metrics": {
+          "MSE_mm2": 30.517578125,
+          "RMSE_mm": 5.524271728019903,
+          "MAE_mm": 5.46875,
+          "MRE_mm": 7.8125
+        }
+      }
+    }
+  },
+  "hc18": {
+    "passed": true,
+    "training_settings_unchanged": true,
+    "config": "/home/wzk/WorkSpace/ViTPose/configs/body/2d_kpt_sview_rgb_img/topdown_heatmap/painter3d/ViTPose_base_hc18_256x192.py",
+    "work_dir": "work_dirs/painter3d_seed42/hc18",
+    "evaluation": {
+      "interval": 10,
+      "metric": [
+        "MRE",
+        "MSE",
+        "RMSE",
+        "MAE"
+      ],
+      "pixel_spacing_mm": 0.108,
+      "save_best": "MRE_mm",
+      "rule": "less"
+    },
+    "metric_units": "mm (MSE: mm^2)",
+    "splits": {
+      "train": {
+        "images": 210,
+        "annotation_file": "datasets_analysis/coco_format/painter3d/hc18/annotations/train.json",
+        "image_root": "/data/users/mqf/Painter-3D/data/",
+        "batch_shape": [
+          8,
+          3,
+          256,
+          192
+        ],
+        "target_shape": [
+          8,
+          13,
+          64,
+          48
+        ],
+        "annotation_sha256": "5d41eb8a4801cd5e33089df4eb5e1fc7340fdba4368e0db770b3a6dcdffad014",
+        "gt_self_check": {
+          "MSE_mm2": 6.324545932112065e-14,
+          "RMSE_mm": 2.5148649928201045e-07,
+          "MAE_mm": 5.985496437969293e-08,
+          "MRE_mm": 9.125755891853135e-08
+        },
+        "synthetic_3_4_pixel_offset_metrics": {
+          "MSE_mm2": 0.14579999455196482,
+          "RMSE_mm": 0.3818376547067678,
+          "MAE_mm": 0.37799999310155175,
+          "MRE_mm": 0.5399999899109937
+        }
+      },
+      "val": {
+        "images": 60,
+        "annotation_file": "datasets_analysis/coco_format/painter3d/hc18/annotations/val.json",
+        "image_root": "/data/users/mqf/Painter-3D/data/",
+        "batch_shape": [
+          8,
+          3,
+          256,
+          192
+        ],
+        "target_shape": null,
+        "annotation_sha256": "1a9677ec20b7646869be10fcd56a7aa10e4d89ac3e7b6b2ef734c13bc4193bd6",
+        "gt_self_check": {
+          "MSE_mm2": 5.989561313460498e-14,
+          "RMSE_mm": 2.4473580272327336e-07,
+          "MAE_mm": 5.9334622906047884e-08,
+          "MRE_mm": 9.033930576480157e-08
+        },
+        "synthetic_3_4_pixel_offset_metrics": {
+          "MSE_mm2": 0.1457999999489481,
+          "RMSE_mm": 0.3818376617738854,
+          "MAE_mm": 0.37799999956899794,
+          "MRE_mm": 0.5399999999053958
+        }
+      },
+      "test": {
+        "images": 30,
+        "annotation_file": "datasets_analysis/coco_format/painter3d/hc18/annotations/test.json",
+        "image_root": "/data/users/mqf/Painter-3D/data/",
+        "batch_shape": [
+          8,
+          3,
+          256,
+          192
+        ],
+        "target_shape": null,
+        "annotation_sha256": "1d07de082b8aa5f7000c55c31f6ed224c11e7b91d7dfee4d04639ad9696ad4bd",
+        "gt_self_check": {
+          "MSE_mm2": 5.686791494976037e-14,
+          "RMSE_mm": 2.3846994559013167e-07,
+          "MAE_mm": 5.81768329490947e-08,
+          "MRE_mm": 8.79679291705383e-08
+        },
+        "synthetic_3_4_pixel_offset_metrics": {
+          "MSE_mm2": 0.1457999975758982,
+          "RMSE_mm": 0.38183765866647856,
+          "MAE_mm": 0.3779999965181791,
+          "MRE_mm": 0.5399999955108472
+        }
+      }
+    }
+  },
+  "TG3K": {
+    "passed": true,
+    "training_settings_unchanged": true,
+    "config": "/home/wzk/WorkSpace/ViTPose/configs/body/2d_kpt_sview_rgb_img/topdown_heatmap/painter3d/ViTPose_base_tg3k_256x192.py",
+    "work_dir": "work_dirs/painter3d_seed42/tg3k",
+    "evaluation": {
+      "interval": 10,
+      "metric": [
+        "MRE",
+        "MSE",
+        "RMSE",
+        "MAE"
+      ],
+      "save_best": "MRE",
+      "rule": "less"
+    },
+    "metric_units": "px (MSE: px^2)",
+    "splits": {
+      "train": {
+        "images": 146,
+        "annotation_file": "datasets_analysis/coco_format/painter3d/TG3K/annotations/train.json",
+        "image_root": "/data/users/mqf/Painter-3D/data/",
+        "batch_shape": [
+          8,
+          3,
+          256,
+          192
+        ],
+        "target_shape": [
+          8,
+          5,
+          64,
+          48
+        ],
+        "annotation_sha256": "8b0ee805e4f4a78f728947aea68a28971d25e0efb10d3e5ee26ed1c069d911d9",
+        "gt_self_check": {
+          "MSE": 1.117405928167303e-12,
+          "RMSE": 1.057074230206802e-06,
+          "MAE": 3.835599716269013e-07,
+          "MRE": 5.986132739468098e-07
+        },
+        "synthetic_3_4_pixel_offset_metrics": {
+          "MSE": 12.500000303421094,
+          "RMSE": 3.5355339488429602,
+          "MAE": 3.5000000382096803,
+          "MRE": 5.000000060684117
+        }
+      },
+      "val": {
+        "images": 42,
+        "annotation_file": "datasets_analysis/coco_format/painter3d/TG3K/annotations/val.json",
+        "image_root": "/data/users/mqf/Painter-3D/data/",
+        "batch_shape": [
+          8,
+          3,
+          256,
+          192
+        ],
+        "target_shape": null,
+        "annotation_sha256": "baf4188f763c49dc09863a27a6b484da4214198be46284d623e5fc53e21a4646",
+        "gt_self_check": {
+          "MSE": 1.3398627426060293e-12,
+          "RMSE": 1.1575244025963467e-06,
+          "MAE": 4.0631975417276016e-07,
+          "MRE": 6.40460513524369e-07
+        },
+        "synthetic_3_4_pixel_offset_metrics": {
+          "MSE": 12.500000073824813,
+          "RMSE": 3.5355339163731427,
+          "MAE": 3.5000000103178475,
+          "MRE": 5.000000014764836
+        }
+      },
+      "test": {
+        "images": 20,
+        "annotation_file": "datasets_analysis/coco_format/painter3d/TG3K/annotations/test.json",
+        "image_root": "/data/users/mqf/Painter-3D/data/",
+        "batch_shape": [
+          8,
+          3,
+          256,
+          192
+        ],
+        "target_shape": null,
+        "annotation_sha256": "d4e34f4d58764e93ecafb460d2285c93d34db2f0a8359f93069411cef4c4e7b0",
+        "gt_self_check": {
+          "MSE": 1.4149118218432196e-12,
+          "RMSE": 1.1895006607157558e-06,
+          "MAE": 4.6508789054655607e-07,
+          "MRE": 6.962751776529722e-07
+        },
+        "synthetic_3_4_pixel_offset_metrics": {
+          "MSE": 12.500000295411574,
+          "RMSE": 3.5355339477102428,
+          "MAE": 3.5000000509643554,
+          "MRE": 5.000000059082185
+        }
+      }
+    }
+  },
+  "ChestX-ray": {
+    "passed": true,
+    "training_settings_unchanged": true,
+    "config": "/home/wzk/WorkSpace/ViTPose/configs/body/2d_kpt_sview_rgb_img/topdown_heatmap/painter3d/ViTPose_base_chestxray_256x192.py",
+    "work_dir": "work_dirs/painter3d_seed42/chestxray",
+    "evaluation": {
+      "interval": 10,
+      "metric": [
+        "MRE",
+        "MSE",
+        "RMSE",
+        "MAE"
+      ],
+      "pixel_spacing_mm": 1.4,
+      "save_best": "MRE_mm",
+      "rule": "less"
+    },
+    "metric_units": "mm (MSE: mm^2)",
+    "splits": {
+      "train": {
+        "images": 164,
+        "annotation_file": "datasets_analysis/coco_format/painter3d/ChestX-ray/annotations/train.json",
+        "image_root": "/data/users/mqf/Painter-3D/data/",
+        "batch_shape": [
+          8,
+          3,
+          256,
+          192
+        ],
+        "target_shape": [
+          8,
+          32,
+          64,
+          48
+        ],
+        "annotation_sha256": "995f9a62bf9b5f8f34e3d696ee32a0df502fc93a755955a383fb939f3f93a55c",
+        "gt_self_check": {
+          "MSE_mm2": 1.0573873279530559e-12,
+          "RMSE_mm": 1.0282934055769568e-06,
+          "MAE_mm": 2.0823362395641033e-07,
+          "MRE_mm": 3.2556815131348333e-07
+        },
+        "synthetic_3_4_pixel_offset_metrics": {
+          "MSE_mm2": 24.499999985480542,
+          "RMSE_mm": 4.949747466839146,
+          "MAE_mm": 4.8999999975983695,
+          "MRE_mm": 6.999999997925727
+        }
+      },
+      "val": {
+        "images": 47,
+        "annotation_file": "datasets_analysis/coco_format/painter3d/ChestX-ray/annotations/val.json",
+        "image_root": "/data/users/mqf/Painter-3D/data/",
+        "batch_shape": [
+          8,
+          3,
+          256,
+          192
+        ],
+        "target_shape": null,
+        "annotation_sha256": "2e6a7fe801a2f82030064365d1cdf13c239a7f4ec80dd6540e685df23c01e890",
+        "gt_self_check": {
+          "MSE_mm2": 1.1807787628846039e-12,
+          "RMSE_mm": 1.086636444669791e-06,
+          "MAE_mm": 2.211509866959717e-07,
+          "MRE_mm": 3.512816023683562e-07
+        },
+        "synthetic_3_4_pixel_offset_metrics": {
+          "MSE_mm2": 24.50000000739844,
+          "RMSE_mm": 4.949747469053188,
+          "MAE_mm": 4.900000001761255,
+          "MRE_mm": 7.000000001056851
+        }
+      },
+      "test": {
+        "images": 24,
+        "annotation_file": "datasets_analysis/coco_format/painter3d/ChestX-ray/annotations/test.json",
+        "image_root": "/data/users/mqf/Painter-3D/data/",
+        "batch_shape": [
+          8,
+          3,
+          256,
+          192
+        ],
+        "target_shape": null,
+        "annotation_sha256": "79197e8e87162b9933bb62c7aa610b786a2dd6abb52d66ad4b5db177d89d9c54",
+        "gt_self_check": {
+          "MSE_mm2": 1.1359858026497486e-12,
+          "RMSE_mm": 1.0658263473238728e-06,
+          "MAE_mm": 2.2374788907116487e-07,
+          "MRE_mm": 3.501578645115348e-07
+        },
+        "synthetic_3_4_pixel_offset_metrics": {
+          "MSE_mm2": 24.499999996885794,
+          "RMSE_mm": 4.9497474679912505,
+          "MAE_mm": 4.899999996940296,
+          "MRE_mm": 6.999999999555048
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,311 @@
+{
+  "data_root": "/data/users/mqf/Painter-3D/data",
+  "split_policy": "Use dataset-local data/{train,val,test}.json verbatim",
+  "datasets": {
+    "acdc": {
+      "train": {
+        "images": 516,
+        "keypoints": 14,
+        "sizes": {
+          "256x216": 155,
+          "224x180": 11,
+          "256x256": 14,
+          "216x256": 61,
+          "176x256": 5,
+          "256x208": 52,
+          "224x154": 12,
+          "208x174": 17,
+          "174x208": 10,
+          "166x240": 2,
+          "256x232": 23,
+          "208x256": 7,
+          "224x222": 4,
+          "256x192": 16,
+          "256x214": 16,
+          "180x224": 3,
+          "256x248": 10,
+          "256x200": 6,
+          "256x224": 12,
+          "208x168": 4,
+          "224x168": 3,
+          "512x428": 3,
+          "224x210": 3,
+          "232x256": 3,
+          "256x184": 5,
+          "384x276": 5,
+          "288x184": 5,
+          "214x256": 4,
+          "184x256": 4,
+          "304x216": 4,
+          "256x240": 12,
+          "288x264": 3,
+          "154x224": 8,
+          "288x232": 5,
+          "162x208": 3,
+          "224x174": 4,
+          "208x162": 2
+        },
+        "modes": {
+          "RGB": 516
+        },
+        "formats": {
+          "PNG": 516
+        },
+        "out_of_bounds_points": 0,
+        "source_json": "/data/users/mqf/Painter-3D/data/acdc/data/train.json",
+        "source_sha256": "9511c7530a6c776a3233cad5874cba70e61981d2672edfdb137fabd21075cd60"
+      },
+      "val": {
+        "images": 147,
+        "keypoints": 14,
+        "sizes": {
+          "256x192": 5,
+          "208x168": 1,
+          "512x428": 2,
+          "256x216": 40,
+          "256x208": 12,
+          "256x224": 6,
+          "216x256": 15,
+          "224x180": 6,
+          "224x154": 8,
+          "174x208": 3,
+          "208x174": 7,
+          "208x162": 3,
+          "208x256": 1,
+          "304x216": 1,
+          "256x232": 10,
+          "256x256": 2,
+          "256x214": 6,
+          "180x224": 1,
+          "256x240": 5,
+          "184x256": 1,
+          "232x256": 2,
+          "166x240": 2,
+          "256x200": 1,
+          "224x168": 1,
+          "162x208": 1,
+          "224x222": 1,
+          "224x174": 1,
+          "224x210": 1,
+          "214x256": 1,
+          "288x264": 1
+        },
+        "modes": {
+          "RGB": 147
+        },
+        "formats": {
+          "PNG": 147
+        },
+        "out_of_bounds_points": 0,
+        "source_json": "/data/users/mqf/Painter-3D/data/acdc/data/val.json",
+        "source_sha256": "38025c6b5dde84245fb3e6b0f618df5f71e73bd39a2111d7770d107ee8a5cbaa"
+      },
+      "test": {
+        "images": 75,
+        "keypoints": 14,
+        "sizes": {
+          "208x256": 2,
+          "256x214": 3,
+          "216x256": 9,
+          "180x224": 1,
+          "256x232": 6,
+          "256x192": 4,
+          "256x216": 22,
+          "256x208": 5,
+          "162x208": 1,
+          "288x264": 1,
+          "256x256": 4,
+          "224x180": 3,
+          "154x224": 2,
+          "224x210": 1,
+          "166x240": 1,
+          "208x174": 1,
+          "174x208": 2,
+          "256x224": 2,
+          "256x240": 3,
+          "224x168": 1,
+          "256x200": 1
+        },
+        "modes": {
+          "RGB": 75
+        },
+        "formats": {
+          "PNG": 75
+        },
+        "out_of_bounds_points": 0,
+        "source_json": "/data/users/mqf/Painter-3D/data/acdc/data/test.json",
+        "source_sha256": "3ecc652f5d90762a7d7a60975558a71988e23e652a0117f39c186cdacfa61dad"
+      }
+    },
+    "hc18": {
+      "train": {
+        "images": 210,
+        "keypoints": 13,
+        "sizes": {
+          "800x540": 204,
+          "780x539": 1,
+          "788x545": 1,
+          "798x541": 1,
+          "800x542": 2,
+          "789x540": 1
+        },
+        "modes": {
+          "RGB": 210
+        },
+        "formats": {
+          "PNG": 210
+        },
+        "out_of_bounds_points": 0,
+        "source_json": "/data/users/mqf/Painter-3D/data/hc18/data/train.json",
+        "source_sha256": "d51cbcd92677385f7d11f2b02badf21ba2bef880ebc9c678b1b91dec18ec3ddf"
+      },
+      "val": {
+        "images": 60,
+        "keypoints": 13,
+        "sizes": {
+          "800x540": 57,
+          "799x563": 1,
+          "800x542": 1,
+          "794x543": 1
+        },
+        "modes": {
+          "RGB": 60
+        },
+        "formats": {
+          "PNG": 60
+        },
+        "out_of_bounds_points": 0,
+        "source_json": "/data/users/mqf/Painter-3D/data/hc18/data/val.json",
+        "source_sha256": "847a826c8203a0b71a0154a52237f5bb7263ad043963b005557e68882af2eda8"
+      },
+      "test": {
+        "images": 30,
+        "keypoints": 13,
+        "sizes": {
+          "800x540": 30
+        },
+        "modes": {
+          "RGB": 30
+        },
+        "formats": {
+          "PNG": 30
+        },
+        "out_of_bounds_points": 0,
+        "source_json": "/data/users/mqf/Painter-3D/data/hc18/data/test.json",
+        "source_sha256": "3a5b912f2e3c9913e8d541be2a4ce51d82e51c6f9532b7a8f76557f30c2b6d48"
+      }
+    },
+    "TG3K": {
+      "train": {
+        "images": 146,
+        "keypoints": 5,
+        "sizes": {
+          "278x191": 42,
+          "214x209": 28,
+          "325x193": 25,
+          "240x204": 25,
+          "241x174": 26
+        },
+        "modes": {
+          "RGB": 146
+        },
+        "formats": {
+          "PNG": 146
+        },
+        "out_of_bounds_points": 0,
+        "source_json": "/data/users/mqf/Painter-3D/data/TG3K/data/train.json",
+        "source_sha256": "c6e05f0cec6cad4c436a90814690b97b528f87134211da8e26db5d949a7b8c77"
+      },
+      "val": {
+        "images": 42,
+        "keypoints": 5,
+        "sizes": {
+          "241x174": 9,
+          "278x191": 13,
+          "214x209": 2,
+          "240x204": 7,
+          "325x193": 11
+        },
+        "modes": {
+          "RGB": 42
+        },
+        "formats": {
+          "PNG": 42
+        },
+        "out_of_bounds_points": 0,
+        "source_json": "/data/users/mqf/Painter-3D/data/TG3K/data/val.json",
+        "source_sha256": "006451e1036bcaef1544afd13bdfa4e43e7ed01aafc970536c4dca06b2163092"
+      },
+      "test": {
+        "images": 20,
+        "keypoints": 5,
+        "sizes": {
+          "214x209": 6,
+          "278x191": 4,
+          "241x174": 2,
+          "325x193": 4,
+          "240x204": 4
+        },
+        "modes": {
+          "RGB": 20
+        },
+        "formats": {
+          "PNG": 20
+        },
+        "out_of_bounds_points": 0,
+        "source_json": "/data/users/mqf/Painter-3D/data/TG3K/data/test.json",
+        "source_sha256": "2fbe3b0ecd8d4f074b3e270863ccaf3ceffbf4293f8125b6c3bdea48cb3c9a1d"
+      }
+    },
+    "ChestX-ray": {
+      "train": {
+        "images": 164,
+        "keypoints": 32,
+        "sizes": {
+          "256x256": 164
+        },
+        "modes": {
+          "RGB": 164
+        },
+        "formats": {
+          "PNG": 164
+        },
+        "out_of_bounds_points": 0,
+        "source_json": "/data/users/mqf/Painter-3D/data/ChestX-ray/data/train.json",
+        "source_sha256": "22a5d21b2ae8fabdc465d66c2749e27ebe4acf9b42dee622eeef016350862c57"
+      },
+      "val": {
+        "images": 47,
+        "keypoints": 32,
+        "sizes": {
+          "256x256": 47
+        },
+        "modes": {
+          "RGB": 47
+        },
+        "formats": {
+          "PNG": 47
+        },
+        "out_of_bounds_points": 0,
+        "source_json": "/data/users/mqf/Painter-3D/data/ChestX-ray/data/val.json",
+        "source_sha256": "ceb1261253b70e78a94c0608b3296830ddc3f340d87732464c53863f7bc61c67"
+      },
+      "test": {
+        "images": 24,
+        "keypoints": 32,
+        "sizes": {
+          "256x256": 24
+        },
+        "modes": {
+          "RGB": 24
+        },
+        "formats": {
+          "PNG": 24
+        },
+        "out_of_bounds_points": 0,
+        "source_json": "/data/users/mqf/Painter-3D/data/ChestX-ray/data/test.json",
+        "source_sha256": "f4b426f2bcf2b3ad5ebd206ba1b0c4dd3f074f6195206b724321be445c1a912b"
+      }
+    }
+  }
+}

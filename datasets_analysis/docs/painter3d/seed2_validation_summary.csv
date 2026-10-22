@@ -1,0 +1,5 @@
+﻿dataset,seed,best_epoch,unit,mse_unit,MRE,MSE,RMSE,MAE,seed1_validation_MRE,MRE_change_percent,checkpoint
+acdc,2,200,mm,mm^2,4.645657815021728,78.61457,8.86649,2.88152,4.708065198582291,-1.3255420417575214,work_dirs/painter3d_seed2/acdc/best_MRE_mm_epoch_200.pth
+hc18,2,210,mm,mm^2,0.6456015048825796,0.27916,0.52836,0.41271,0.6300006875397419,2.4763175106620183,work_dirs/painter3d_seed2/hc18/best_MRE_mm_epoch_210.pth
+TG3K,2,200,px,px^2,1.1324507555862027,1.133,1.06442,0.7028,0.9655500373623694,17.28555867283299,work_dirs/painter3d_seed2/tg3k/best_MRE_epoch_200.pth
+ChestX-ray,2,210,mm,mm^2,3.622188880477864,12.56406,3.54458,2.25976,3.5974751664593847,0.6869738601365416,work_dirs/painter3d_seed2/chestxray/best_MRE_mm_epoch_210.pth

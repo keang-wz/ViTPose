@@ -1,4 +1,4 @@
-"""Strict COCO-GT matching and original-image pixel coordinate metrics."""
+"""Strict COCO-GT matching with pixel or calibrated physical-distance metrics."""
 import hashlib
 import json
 from pathlib import Path
@@ -59,25 +59,44 @@ def index_gt(gt):
 
 def summarize(delta, scales, thresholds):
     if len(delta) == 0:
-        return dict(evaluated_keypoints=0, coordinate_mse=None, rmse=None,
-                    mae=None, mean_euclidean_distance_error=None,
-                    pck={f'{t:g}': None for t in thresholds})
+        result = dict(evaluated_keypoints=0, coordinate_mse=None, rmse=None,
+                      mae=None, mean_euclidean_distance_error=None)
+        if thresholds is not None:
+            result['pck'] = {f'{t:g}': None for t in thresholds}
+        return result
     delta = np.asarray(delta, dtype=np.float64)
     distance = np.linalg.norm(delta, axis=1)
     mse = float(np.mean(delta ** 2))
-    return dict(evaluated_keypoints=len(delta), coordinate_mse=mse,
+    result = dict(evaluated_keypoints=len(delta), coordinate_mse=mse,
                 rmse=float(np.sqrt(mse)), mae=float(np.mean(np.abs(delta))),
-                mean_euclidean_distance_error=float(distance.mean()),
-                pck={f'{t:g}': float(np.mean(distance / scales <= t)) for t in thresholds})
+                mean_euclidean_distance_error=float(distance.mean()))
+    if thresholds is not None:
+        result['pck'] = {f'{t:g}': float(np.mean(distance / scales <= t)) for t in thresholds}
+    return result
 
 
-def evaluate(prediction, gt, thresholds=(2, 5, 10, 20), pck_unit='pixels'):
-    thresholds = [float(t) for t in thresholds]
-    if (not thresholds or not np.isfinite(thresholds).all()
-            or any(t < 0 for t in thresholds) or len(set(thresholds)) != len(thresholds)):
-        raise ValueError('PCK thresholds must be unique finite nonnegative numbers')
-    if pck_unit not in ('pixels', 'image_diagonal'):
+def evaluate(prediction, gt, thresholds=(2, 5, 10, 20), pck_unit='pixels',
+             pixel_spacing_mm=None):
+    # None explicitly disables PCK; preserve legacy defaults for existing runs.
+    if thresholds is not None:
+        thresholds = [float(t) for t in thresholds]
+        if (not thresholds or not np.isfinite(thresholds).all()
+                or any(t < 0 for t in thresholds) or len(set(thresholds)) != len(thresholds)):
+            raise ValueError('PCK thresholds must be unique finite nonnegative numbers')
+    if pck_unit not in ('pixels', 'image_diagonal', 'mm'):
         raise ValueError('Unknown PCK unit')
+    spacing = 1.0
+    if pixel_spacing_mm is not None:
+        if (isinstance(pixel_spacing_mm, (bool, str))
+                or np.ndim(pixel_spacing_mm) != 0):
+            raise ValueError('pixel_spacing_mm must be a positive finite scalar')
+        spacing = float(pixel_spacing_mm)
+        if not np.isfinite(spacing) or spacing <= 0:
+            raise ValueError('pixel_spacing_mm must be a positive finite scalar')
+        if thresholds is not None and pck_unit != 'mm':
+            raise ValueError('Physical-distance evaluation requires PCK thresholds in mm')
+    elif thresholds is not None and pck_unit == 'mm':
+        raise ValueError('PCK in mm requires pixel_spacing_mm for original-image pixels')
     if prediction.get('coordinate_space') != 'original_image_pixels':
         raise ValueError('Prediction must declare original_image_pixels coordinate_space')
     images, cats, anns = index_gt(gt)
@@ -126,7 +145,9 @@ def evaluate(prediction, gt, thresholds=(2, 5, 10, 20), pck_unit='pixels'):
             if g[j, 2] == 0:
                 ignored += 1
                 continue
-            delta = p[j] - g[j, :2]
+            # Predictions have already been decoded back to the original PNG.
+            # Never apply source-image spacing to resized inputs or heatmaps.
+            delta = (p[j] - g[j, :2]) * spacing
             deltas.append(delta)
             scales.append(scale)
             group['delta'].append(delta)
@@ -141,6 +162,17 @@ def evaluate(prediction, gt, thresholds=(2, 5, 10, 20), pck_unit='pixels'):
         images=len(images), annotated_images=len(per_image), annotations=len(anns),
         ignored_unannotated_keypoints=ignored,
         overall=summarize(deltas, np.asarray(scales), thresholds), per_keypoint=[])
+    if pixel_spacing_mm is not None:
+        result.update(schema_version=2, pixel_spacing_mm=spacing,
+                      spacing_coordinate_space='original_image_pixels',
+                      spacing_assumption='dataset-wide isotropic spacing supplied by user',
+                      pck_threshold_unit='mm')
+        result['units'] = dict(coordinate_mse='mm^2', rmse='mm', mae='mm',
+                               mean_euclidean_distance_error='mm', pck='fraction')
+    if thresholds is None:
+        for key in ('pck_thresholds', 'pck_boundary', 'pck_threshold_unit'):
+            result.pop(key, None)
+        result['units'].pop('pck', None)
     for (cid, j), group in sorted(grouped.items()):
         result['per_keypoint'].append(dict(category_id=cid, index=j, name=group['name'],
             **summarize(group['delta'], np.asarray(group['scales']), thresholds)))

@@ -1,0 +1,318 @@
+{
+  "scope": "Read-only log/config/checkpoint checks; no model construction, inference, evaluation or training",
+  "seed": 2,
+  "datasets": {
+    "acdc": {
+      "passed": true,
+      "complete_log": "work_dirs/painter3d_seed2/acdc/20261020_202613.log.json",
+      "excluded_interrupted_logs": [],
+      "config": "configs/body/2d_kpt_sview_rgb_img/topdown_heatmap/painter3d/ViTPose_base_acdc_256x192.py",
+      "recorded_config_matches_current": true,
+      "pixel_spacing_mm": 1.5625,
+      "validation_count": 21,
+      "best_validation": {
+        "mode": "val",
+        "epoch": 200,
+        "iter": 19,
+        "lr": 0.0,
+        "MSE_mm2": 78.61457,
+        "RMSE_mm": 8.86649,
+        "MAE_mm": 2.88152,
+        "MRE_mm": 4.64566
+      },
+      "final_validation": {
+        "mode": "val",
+        "epoch": 210,
+        "iter": 19,
+        "lr": 0.0,
+        "MSE_mm2": 79.76582,
+        "RMSE_mm": 8.93117,
+        "MAE_mm": 2.8999,
+        "MRE_mm": 4.67394
+      },
+      "first_validation": {
+        "mode": "val",
+        "epoch": 10,
+        "iter": 19,
+        "lr": 1e-05,
+        "MSE_mm2": 84.39068,
+        "RMSE_mm": 9.18644,
+        "MAE_mm": 4.52819,
+        "MRE_mm": 7.19835
+      },
+      "min_mse_validation": {
+        "mode": "val",
+        "epoch": 40,
+        "iter": 19,
+        "lr": 1e-05,
+        "MSE_mm2": 68.39557,
+        "RMSE_mm": 8.27016,
+        "MAE_mm": 3.33861,
+        "MRE_mm": 5.33753
+      },
+      "mre_reduction_from_epoch10_percent": 35.46215452152229,
+      "checkpoint_checks": {
+        "best": {
+          "file": "work_dirs/painter3d_seed2/acdc/best_MRE_mm_epoch_200.pth",
+          "epoch": 200,
+          "iter": 13000,
+          "seed": 2,
+          "head_channels": 14,
+          "best_score": 4.645657815021728
+        },
+        "last": {
+          "file": "work_dirs/painter3d_seed2/acdc/epoch_210.pth",
+          "epoch": 210,
+          "iter": 13650,
+          "seed": 2,
+          "head_channels": 14,
+          "best_score": 4.645657815021728
+        }
+      },
+      "best_weights_all_finite": true,
+      "last_training_log": {
+        "mode": "train",
+        "epoch": 210,
+        "iter": 50,
+        "lr": 0.0,
+        "memory": 2583,
+        "data_time": 0.04174,
+        "heatmap_loss": 0.0001,
+        "acc_pose": 0.99482,
+        "loss": 0.0001,
+        "grad_norm": 0.00225,
+        "time": 0.10161
+      },
+      "expected_pretrained_head_shape_warnings": [
+        "size mismatch for keypoint_head.final_layer.weight: copying a param with shape torch.Size([17, 256, 1, 1]) from checkpoint, the shape in current model is torch.Size([14, 256, 1, 1]).",
+        "size mismatch for keypoint_head.final_layer.bias: copying a param with shape torch.Size([17]) from checkpoint, the shape in current model is torch.Size([14])."
+      ],
+      "test_evaluation_exists": false
+    },
+    "hc18": {
+      "passed": true,
+      "complete_log": "work_dirs/painter3d_seed2/hc18/20261020_202633.log.json",
+      "excluded_interrupted_logs": [],
+      "config": "configs/body/2d_kpt_sview_rgb_img/topdown_heatmap/painter3d/ViTPose_base_hc18_256x192.py",
+      "recorded_config_matches_current": true,
+      "pixel_spacing_mm": 0.108,
+      "validation_count": 21,
+      "best_validation": {
+        "mode": "val",
+        "epoch": 210,
+        "iter": 8,
+        "lr": 0.0,
+        "MSE_mm2": 0.27916,
+        "RMSE_mm": 0.52836,
+        "MAE_mm": 0.41271,
+        "MRE_mm": 0.6456
+      },
+      "final_validation": {
+        "mode": "val",
+        "epoch": 210,
+        "iter": 8,
+        "lr": 0.0,
+        "MSE_mm2": 0.27916,
+        "RMSE_mm": 0.52836,
+        "MAE_mm": 0.41271,
+        "MRE_mm": 0.6456
+      },
+      "first_validation": {
+        "mode": "val",
+        "epoch": 10,
+        "iter": 8,
+        "lr": 1e-05,
+        "MSE_mm2": 1.04,
+        "RMSE_mm": 1.01981,
+        "MAE_mm": 0.77693,
+        "MRE_mm": 1.21974
+      },
+      "min_mse_validation": {
+        "mode": "val",
+        "epoch": 210,
+        "iter": 8,
+        "lr": 0.0,
+        "MSE_mm2": 0.27916,
+        "RMSE_mm": 0.52836,
+        "MAE_mm": 0.41271,
+        "MRE_mm": 0.6456
+      },
+      "mre_reduction_from_epoch10_percent": 47.07068719563186,
+      "checkpoint_checks": {
+        "best": {
+          "file": "work_dirs/painter3d_seed2/hc18/best_MRE_mm_epoch_210.pth",
+          "epoch": 210,
+          "iter": 5670,
+          "seed": 2,
+          "head_channels": 13,
+          "best_score": 0.6456015048825796
+        },
+        "last": {
+          "file": "work_dirs/painter3d_seed2/hc18/epoch_210.pth",
+          "epoch": 210,
+          "iter": 5670,
+          "seed": 2,
+          "head_channels": 13,
+          "best_score": 0.6509398982375155
+        }
+      },
+      "best_weights_all_finite": true,
+      "last_training_log": null,
+      "expected_pretrained_head_shape_warnings": [
+        "size mismatch for keypoint_head.final_layer.weight: copying a param with shape torch.Size([17, 256, 1, 1]) from checkpoint, the shape in current model is torch.Size([13, 256, 1, 1]).",
+        "size mismatch for keypoint_head.final_layer.bias: copying a param with shape torch.Size([17]) from checkpoint, the shape in current model is torch.Size([13])."
+      ],
+      "test_evaluation_exists": false
+    },
+    "TG3K": {
+      "passed": true,
+      "complete_log": "work_dirs/painter3d_seed2/tg3k/20261020_202645.log.json",
+      "excluded_interrupted_logs": [],
+      "config": "configs/body/2d_kpt_sview_rgb_img/topdown_heatmap/painter3d/ViTPose_base_tg3k_256x192.py",
+      "recorded_config_matches_current": true,
+      "pixel_spacing_mm": null,
+      "validation_count": 21,
+      "best_validation": {
+        "mode": "val",
+        "epoch": 200,
+        "iter": 6,
+        "lr": 0.0,
+        "MSE": 1.133,
+        "RMSE": 1.06442,
+        "MAE": 0.7028,
+        "MRE": 1.13245
+      },
+      "final_validation": {
+        "mode": "val",
+        "epoch": 210,
+        "iter": 6,
+        "lr": 0.0,
+        "MSE": 1.13876,
+        "RMSE": 1.06713,
+        "MAE": 0.70673,
+        "MRE": 1.1422
+      },
+      "first_validation": {
+        "mode": "val",
+        "epoch": 10,
+        "iter": 6,
+        "lr": 0.0,
+        "MSE": 22.32359,
+        "RMSE": 4.72478,
+        "MAE": 3.11965,
+        "MRE": 5.00445
+      },
+      "min_mse_validation": {
+        "mode": "val",
+        "epoch": 200,
+        "iter": 6,
+        "lr": 0.0,
+        "MSE": 1.133,
+        "RMSE": 1.06442,
+        "MAE": 0.7028,
+        "MRE": 1.13245
+      },
+      "mre_reduction_from_epoch10_percent": 77.37113968567975,
+      "checkpoint_checks": {
+        "best": {
+          "file": "work_dirs/painter3d_seed2/tg3k/best_MRE_epoch_200.pth",
+          "epoch": 200,
+          "iter": 3800,
+          "seed": 2,
+          "head_channels": 5,
+          "best_score": 1.1324507555862027
+        },
+        "last": {
+          "file": "work_dirs/painter3d_seed2/tg3k/epoch_210.pth",
+          "epoch": 210,
+          "iter": 3990,
+          "seed": 2,
+          "head_channels": 5,
+          "best_score": 1.1324507555862027
+        }
+      },
+      "best_weights_all_finite": true,
+      "last_training_log": null,
+      "expected_pretrained_head_shape_warnings": [
+        "size mismatch for keypoint_head.final_layer.weight: copying a param with shape torch.Size([17, 256, 1, 1]) from checkpoint, the shape in current model is torch.Size([5, 256, 1, 1]).",
+        "size mismatch for keypoint_head.final_layer.bias: copying a param with shape torch.Size([17]) from checkpoint, the shape in current model is torch.Size([5])."
+      ],
+      "test_evaluation_exists": false
+    },
+    "ChestX-ray": {
+      "passed": true,
+      "complete_log": "work_dirs/painter3d_seed2/chestxray/20261020_202657.log.json",
+      "excluded_interrupted_logs": [],
+      "config": "configs/body/2d_kpt_sview_rgb_img/topdown_heatmap/painter3d/ViTPose_base_chestxray_256x192.py",
+      "recorded_config_matches_current": true,
+      "pixel_spacing_mm": 1.4,
+      "validation_count": 21,
+      "best_validation": {
+        "mode": "val",
+        "epoch": 210,
+        "iter": 6,
+        "lr": 0.0,
+        "MSE_mm2": 12.56406,
+        "RMSE_mm": 3.54458,
+        "MAE_mm": 2.25976,
+        "MRE_mm": 3.62219
+      },
+      "final_validation": {
+        "mode": "val",
+        "epoch": 210,
+        "iter": 6,
+        "lr": 0.0,
+        "MSE_mm2": 12.56406,
+        "RMSE_mm": 3.54458,
+        "MAE_mm": 2.25976,
+        "MRE_mm": 3.62219
+      },
+      "first_validation": {
+        "mode": "val",
+        "epoch": 10,
+        "iter": 6,
+        "lr": 0.0,
+        "MSE_mm2": 48.71608,
+        "RMSE_mm": 6.97969,
+        "MAE_mm": 4.58483,
+        "MRE_mm": 7.39404
+      },
+      "min_mse_validation": {
+        "mode": "val",
+        "epoch": 210,
+        "iter": 6,
+        "lr": 0.0,
+        "MSE_mm2": 12.56406,
+        "RMSE_mm": 3.54458,
+        "MAE_mm": 2.25976,
+        "MRE_mm": 3.62219
+      },
+      "mre_reduction_from_epoch10_percent": 51.01203131170511,
+      "checkpoint_checks": {
+        "best": {
+          "file": "work_dirs/painter3d_seed2/chestxray/best_MRE_mm_epoch_210.pth",
+          "epoch": 210,
+          "iter": 4410,
+          "seed": 2,
+          "head_channels": 32,
+          "best_score": 3.622188880477864
+        },
+        "last": {
+          "file": "work_dirs/painter3d_seed2/chestxray/epoch_210.pth",
+          "epoch": 210,
+          "iter": 4410,
+          "seed": 2,
+          "head_channels": 32,
+          "best_score": 3.6585089450723287
+        }
+      },
+      "best_weights_all_finite": true,
+      "last_training_log": null,
+      "expected_pretrained_head_shape_warnings": [
+        "size mismatch for keypoint_head.final_layer.weight: copying a param with shape torch.Size([17, 256, 1, 1]) from checkpoint, the shape in current model is torch.Size([32, 256, 1, 1]).",
+        "size mismatch for keypoint_head.final_layer.bias: copying a param with shape torch.Size([17]) from checkpoint, the shape in current model is torch.Size([32])."
+      ],
+      "test_evaluation_exists": false
+    }
+  }
+}

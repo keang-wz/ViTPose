@@ -1,5 +1,8 @@
 # 医学关键点数据处理
 
+Painter-3D 新版 acdc、hc18、TG3K、ChestX-ray 的数据检查、独立格式适配和手动训练命令见
+[docs/painter3d/README.md](docs/painter3d/README.md)。
+
 真实数据分析见 [docs/dataset_analysis.md](docs/dataset_analysis.md)，完整验证见 [docs/validation_results.json](docs/validation_results.json)。
 
 在 ViTPose 项目根目录执行：
